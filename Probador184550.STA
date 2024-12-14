@@ -1,6 +1,6 @@
 
-ROM used:   4882/32768 (15%)
-            4882/32768 (15%) including unused fragments
+ROM used:   4884/32768 (15%)
+            4884/32768 (15%) including unused fragments
 
             3.6 Average locations per line
             18.1 Average locations per statement
@@ -13,11 +13,11 @@ Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  279   192  71  Probador184550.c
+  280   193  71  Probador184550.c
   852     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18f4550.h
   213    77  29  ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\i2c_Flex_LCD.c
 ----- -----
- 1344   269 Total
+ 1345   270 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
@@ -36,7 +36,7 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0      8   0    0    193  2.6  @const723
 0     32   0    2   6112  6.0  @PSTRINGC_705
 0     54   1    0    193  2.6  Boton
-0   2080  21   13   6112  6.0  MAIN
+0   2082  21   13   6152  6.0  MAIN
 0     16   0    0             @const734
 0     16   0    0             @const735
 0     56   1    2             @ITOF
@@ -73,12 +73,12 @@ Page ROM  %  RAM    Vol Diff  Functions:
 
 Program metrics:
     Functions               15
-    Statements              269
+    Statements              270
     Comments                316
-    Volume (V)              22590
+    Volume (V)              22636
     Difficulty (D)          65.9
-    Effort to implement (E) 1487956
-    Time to implement (T)   22 hours, 58 minutes
+    Effort to implement (E) 1491164
+    Time to implement (T)   23 hours, 1 minutes
     Est Delivered Bugs (B)  4
     Cyclomatic Complexity   69
     Maintainability (MI)    122
@@ -88,7 +88,7 @@ Program metrics:
 00000-00002     4  0  
 00004-00006     0  4  
 00008-000B8   178  0  
-000BA-07FFE  4700  27882  
+000BA-07FFE  4702  27880  
 
 
 
