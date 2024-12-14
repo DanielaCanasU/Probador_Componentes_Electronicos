@@ -5,8 +5,8 @@
 #include <lcd.c>
 #use fast_io(a)
 float Lecturaad620;
-//int32 valor_recarga = 29285;
-int32 valor_recarga = 0;
+int32 valor_recarga = 29285;
+//int32 valor_recarga = 0;
 int pulsos_555 =  0;
 int1 bandera_prueba_555;
 int1 bandera_estado_555;
@@ -187,12 +187,7 @@ MENUPRINCIPAL:
                               }
                            }
                         }
-                        printf(lcd_putc,"\f"); //Limpiar la pantalla
-                        lcd_gotoxy(0,2);
-                        printf(lcd_putc," Regresando...");
-                        delay_ms(1000);
                      }
-                     
                  
                   
                   if(Boton()==2){

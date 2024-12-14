@@ -5,8 +5,8 @@
 #include <lcd.c>
 #use fast_io(a)
 float Lecturaad620;
-//int32 valor_recarga = 29285;
-int32 valor_recarga = 0;
+int32 valor_recarga = 29285;
+//int32 valor_recarga = 0;
 int pulsos_555 =  0;
 int1 bandera_prueba_555;
 int1 bandera_estado_555;
@@ -55,7 +55,7 @@ void main(){
       setup_oscillator(OSC_4MHZ);
       set_tris_a(0xff);// puerto a entrada
       set_tris_d(0x00);// puerto d salida
-      SETUP_COUNTERS(RTCC_INTERNAL,RTCC_DIV_32);
+      SETUP_COUNTERS(RTCC_INTERNAL,RTCC_DIV_256);
       ENABLE_INTERRUPTS(GLOBAL);// Habilita las interrupciones globales
       ext_int_edge(H_TO_L); //Inicia el flanco de la interruccion de alto abajo
       lcd_init();
@@ -187,13 +187,8 @@ MENUPRINCIPAL:
                               }
                            }
                         }
-                        printf(lcd_putc,"\f"); //Limpiar la pantalla
-                        lcd_gotoxy(0,2);
-                        printf(lcd_putc," Regresando...");
-                        delay_ms(1000);
                      }
-                     
-                 
+                  }
                   
                   if(Boton()==2){
                         while(1){

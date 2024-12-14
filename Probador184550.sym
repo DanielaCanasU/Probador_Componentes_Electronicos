@@ -1,0 +1,201 @@
+000     @SCRATCH
+001     @SCRATCH
+001     _RETURN_
+002     @SCRATCH
+003     @SCRATCH
+004     @INTERRUPT_AREA
+005     @INTERRUPT_AREA
+006     @INTERRUPT_AREA
+007     @INTERRUPT_AREA
+008     @INTERRUPT_AREA
+009     @INTERRUPT_AREA
+00A     @INTERRUPT_AREA
+00B     @INTERRUPT_AREA
+00C     @INTERRUPT_AREA
+00D     @INTERRUPT_AREA
+00E     @INTERRUPT_AREA
+00F     @INTERRUPT_AREA
+010     @INTERRUPT_AREA
+011     @INTERRUPT_AREA
+012     @INTERRUPT_AREA
+013     @INTERRUPT_AREA
+014     @INTERRUPT_AREA
+015     @INTERRUPT_AREA
+016     @INTERRUPT_AREA
+017     @INTERRUPT_AREA
+018     @INTERRUPT_AREA
+019     @INTERRUPT_AREA
+01A-01D Lecturaad620
+01E-021 valor_recarga
+022     pulsos_555
+023.0   bandera_prueba_555
+023.1   bandera_estado_555
+024-027 value
+028-029 @sprintf_string
+02A-02D MAIN.valor_adc
+02E-031 MAIN.lectura
+032-035 MAIN.Lecturaad620
+036-039 @PRINTF_L32D_695FPFPF.P1
+036     lcd_init.i
+036-037 @ITOF.P1
+036     @PSTRINGCN_695.P2
+036     @PRINTF_D_695.P3
+036     MAIN.@SCRATCH1
+037-03A lcd_init.LCD_INIT_STRING
+037     @PRINTF_D_695.P1
+037     @PSTRINGCN_695.@SCRATCH1
+038     @PSTRINGCN_695.@SCRATCH2
+038     @PRINTF_D_695.@SCRATCH1
+039     @PRINTF_D_695.@SCRATCH2
+03A     @PRINTF_L32D_695FPFPF.P1
+03A     @PRINTF_D_695.@SCRATCH3
+03B     lcd_init.@SCRATCH1
+03B     @PRINTF_L32D_695FPFPF.@SCRATCH1
+03B     @PRINTF_D_695.@SCRATCH4
+03C     @DIV88.P1
+03C     @PRINTF_L32D_695FPFPF.@SCRATCH2
+03D     @DIV88.P1
+03D     @PRINTF_L32D_695FPFPF.@SCRATCH3
+03E     @PRINTF_L32D_695FPFPF.@SCRATCH4
+03E     @DIV88.@SCRATCH1
+03F     @PRINTF_L32D_695FPFPF.@SCRATCH5
+040     @PRINTF_L32D_695FPFPF.@SCRATCH6
+041     @PRINTF_L32D_695FPFPF.@SCRATCH7
+042     @PRINTF_L32D_695FPFPF.@SCRATCH8
+043-046 @DIV3232.P1
+043-046 @MULFF.P2
+043-046 @FTOSD.P3
+047-04A @DIV3232.P1
+047-04A @MULFF.P2
+047     @FTOSD.@SCRATCH1
+04B     @MULFF.@SCRATCH1
+04B     @DIV3232.@SCRATCH1
+04C     @MULFF.@SCRATCH2
+04C     @DIV3232.@SCRATCH2
+04D     @MULFF.@SCRATCH3
+04D     @DIV3232.@SCRATCH3
+04E     @DIV3232.@SCRATCH4
+04F     @DIV3232.@SCRATCH5
+050     @PSTRINGC_695.@SCRATCH1
+051     @PSTRINGC_695.@SCRATCH2
+052     lcd_putc.c
+053     @delay_ms1.P1
+053     lcd_gotoxy.x
+054     lcd_gotoxy.y
+055     lcd_gotoxy.address
+056     lcd_gotoxy.@SCRATCH1
+057     lcd_send_byte.address
+058     lcd_send_byte.n
+059     lcd_read_byte.low
+059     lcd_send_byte.@SCRATCH1
+05A     lcd_send_nibble.n
+05A     lcd_read_byte.high
+05B     lcd_read_byte.@SCRATCH1
+F83     PSP_DATA
+F83     lcd
+F8C     lcdlat
+F95     lcdtris
+FB4.6   C1OUT
+FB4.7   C2OUT
+FBB     CCP_2
+FBB     CCP_2_LOW
+FBC     CCP_2_HIGH
+FBE     CCP_1
+FBE     CCP_1_LOW
+FBF     CCP_1_HIGH
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @READ_PACKED_MEMORY.P1
+FE9-FEA @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
+FE9-FEA @READ_PROGRAM_MEMORY.P4
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
+
+ROM Allocation:
+0000BA  pulsos
+0000C6  lcd_read_nibble
+0000D2  lcd_read_byte
+00010E  lcd_send_nibble
+000126  lcd_send_byte
+000160  lcd_gotoxy
+000182  @delay_ms1
+0001AA  lcd_putc
+0001FA  @PSTRINGC_695
+00021A  tiempo_final_555
+000250  @const716.call
+000258  @const727.call
+000268  @const728.call
+000278  @const738.call
+00028A  @const739.call
+00029A  @const751.call
+0002AA  @const752.call
+0002BC  @const754.call
+0002CC  @const755.call
+0002D6  @const757.call
+0002DE  @const764.call
+0002E8  @const766.call
+0002F2  @const767.call
+0002FC  @const769.call
+00030C  @const771.call
+00031E  @const772.call
+000328  @const774.call
+000338  @const776.call
+000348  @const777.call
+000352  @const779.call
+000362  @const781.call
+000374  @const782.call
+000386  @const784.call
+000398  @const785.call
+0003A2  @const787.call
+0003B2  lcd_init
+00046E  Boton
+0004A4  @ITOF
+0004DC  @MULFF
+0005CE  @PSTRINGCN_695
+0005F8  @FTOSD
+000638  @DIV3232
+0006C6  @PRINTF_L32D_695FPFPF
+000870  @DIV88
+000898  @PRINTF_D_695
+000972  @cinit1
+000972  MAIN
+000998  @cinit2
+04E4  MENUPRINCIPAL
+
+Project Directory:
+    C:\Users\Persona\Documents\Universidad\Servicio\Probador_Componentes_Electronicos\
+
+Project Files:
+    Probador184550.c                                        [14-Dec-24 14:33  CRC=9345AE5D]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18f4550.h [15-Jan-18 15:57  CRC=06200171]
+    ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c [22-Feb-16 09:05  CRC=D1A6378A]
+
+Source signature=3CB21EE2
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=25F5
+
+Units:
+    Probador184550 (main)
+
+Compiler Settings:
+    Processor:      PIC18F4550
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   Probador184550.xsym
+    Errors:      Probador184550.err
+    Ext Symbols: Probador184550.esym
+    INHX32:      Probador184550.hex
+    Symbols:     Probador184550.sym
+    List:        Probador184550.lst
+    Debug/COFF:  Probador184550.cof
+    Project:     Probador184550.ccspjt
+    Call Tree:   Probador184550.tre
+    Statistics:  Probador184550.STA

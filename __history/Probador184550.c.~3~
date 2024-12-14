@@ -5,12 +5,10 @@
 #include <lcd.c>
 #use fast_io(a)
 float Lecturaad620;
-//int32 valor_recarga = 29285;
-int32 valor_recarga = 0;
+int32 valor_recarga = 29285;
 int pulsos_555 =  0;
 int1 bandera_prueba_555;
 int1 bandera_estado_555;
-int32 value;
 
 #INT_EXT
 void pulsos() {
@@ -21,21 +19,14 @@ void pulsos() {
 #INT_RTCC 
 void tiempo_final_555() {
    DISABLE_INTERRUPTS(INT_EXT);// Inhabilitar las interrupciones del timer0
-   DISABLE_INTERRUPTS(INT_RTCC);
    bandera_prueba_555 = 0;
-   if (pulsos_555 > 9) {
+   if pulsos_555 > 9 {
       bandera_estado_555 = 1;
    }
    
    else {
       bandera_estado_555 = 0;
    }
-   
-   CLEAR_INTERRUPT(INT_RTCC);
-   printf(lcd_putc,"\f");
-   lcd_gotoxy(5,1);
-   printf(lcd_putc," UNEXPO");
-   DISABLE_INTERRUPTS(INT_RTCC);
 }
 
 int Boton(){
@@ -52,16 +43,14 @@ int Boton(){
          }
 void main(){
    while(true){ 
-      setup_oscillator(OSC_4MHZ);
       set_tris_a(0xff);// puerto a entrada
       set_tris_d(0x00);// puerto d salida
-      SETUP_COUNTERS(RTCC_INTERNAL,RTCC_DIV_32);
+      SETUP_COUNTERS(RTCC_INTERNAL,RTCC_DIV_32|T0_16_BIT);
       ENABLE_INTERRUPTS(GLOBAL);// Habilita las interrupciones globales
       ext_int_edge(H_TO_L); //Inicia el flanco de la interruccion de alto abajo
       lcd_init();
       setup_adc_ports(0x0e);
       setup_adc(adc_clock_internal);
-            /**
       printf(lcd_putc,"\f");
       lcd_gotoxy(5,1);
       printf(lcd_putc," UNEXPO");
@@ -92,7 +81,7 @@ void main(){
       lcd_gotoxy(0,2);
       printf(lcd_putc," [Tutor]");
       delay_ms(1000);
-      **/
+      
       
 MENUPRINCIPAL:
       while(true){
@@ -145,7 +134,6 @@ MENUPRINCIPAL:
                   if(Boton()==1){
                         bandera_prueba_555 = 1;
                         SET_TIMER0(valor_recarga);
-                        value=get_timer0();
                         ENABLE_INTERRUPTS(INT_RTCC);
                         ENABLE_INTERRUPTS(INT_EXT);// Habilita las interrupciones externas
                         printf(lcd_putc,"\f"); //Limpiar la pantalla
@@ -156,7 +144,7 @@ MENUPRINCIPAL:
                             
                         while(bandera_prueba_555 == 1) {
                            if (Boton() == 2) {
-                              break;
+                              break
                            }
                         }
                         
@@ -164,36 +152,30 @@ MENUPRINCIPAL:
                            if (bandera_estado_555 == 0) {
                               printf(lcd_putc,"\f"); //Limpiar la pantalla
                               lcd_gotoxy(0,1);
-                              printf(lcd_putc,"Malo %i", pulsos_555); //  escribir eso
+                              printf(lcd_putc,"Malo"); //  escribir eso
                               lcd_gotoxy(0,2);
                               printf(lcd_putc," 2>Volver");
                               while(1) {
                                  if(Boton() == 2) {
-                                    break;
+                                    break
                                  }
-                              }
                            }
                            
                            if (bandera_estado_555 == 1) {
                               printf(lcd_putc,"\f"); //Limpiar la pantalla
                               lcd_gotoxy(0,1);
-                              printf(lcd_putc,"Bueno %i", pulsos_555); //  escribir eso
+                              printf(lcd_putc,"Bueno"); //  escribir eso
                               lcd_gotoxy(0,2);
                               printf(lcd_putc," 2>Volver");
                               while(1) {
                                  if(Boton() == 2) {
-                                    break;
+                                    break
                                  }
                               }
                            }
                         }
-                        printf(lcd_putc,"\f"); //Limpiar la pantalla
-                        lcd_gotoxy(0,2);
-                        printf(lcd_putc," Regresando...");
-                        delay_ms(1000);
                      }
-                     
-                 
+                  }
                   
                   if(Boton()==2){
                         while(1){

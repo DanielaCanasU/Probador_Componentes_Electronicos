@@ -1,0 +1,56 @@
+[PROJECT]
+Target=Probador184550.hex
+Processor_Text=PIC18F4550
+CCSVersion=5.076
+Compiler=PCH
+[Target Data]
+FileList=Probador184550.c
+[Probador184550.c]
+Type=4
+[mru-list]
+1=Probador184550.c
+
+[defines]
+buildcount=16
+
+[ProjectLog]
+Days=1
+D1=14-12-2024
+D1_L=14
+D1_L1=[46839]Stopped Editing.
+D1_L2=[47115]Started Editing.
+D1_L3=[47814]Stopped Editing.
+D1_L4=[48621]Started Editing.
+D1_L5=[49409]Stopped Editing.
+D1_L6=[49701]Started Editing.
+D1_L7=[50495]Stopped Editing.
+D1_L8=[51360]Started Editing.
+D1_L9=[51723]Stopped Editing.
+D1_L10=[51934]Started Editing.
+D1_L11=[52756]Stopped Editing.
+D1_L12=[66601]Started Editing.
+D1_L13=[66630]Stopped Editing.
+TotalEdit=68
+TotalDebug=0
+D1_E=68
+D1_D=0
+D1_L14=[66641]Started Editing.
+
+[Opened Files]
+1=Probador184550.c
+t1=173
+2=..\..\..\Practica5.c
+t2=13
+3=..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18f4550.h
+t3=809
+Count=5
+4=Probador184550.sta
+t4=-1
+5=Probador184550.sym
+t5=1
+[Units]
+Count=1
+1=Probador184550 (main)
+
+[fileformats]
+forcecoff=0
