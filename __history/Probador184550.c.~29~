@@ -1,31 +1,26 @@
 #include <18f4550.h>
 #device ADC = 10
-#use i2c(Master,Fast=100000, sda=PIN_B0, scl=PIN_B1,force_sw)
-#include <i2c_Flex_LCD.c>
 #fuses intrc,nowdt
 #use delay(clock=4Mhz)
-//#include <lcd.c>
+#include <lcd.c>
 #use fast_io(a)
 float Lecturaad620;
-int32 valor_recarga = 59285;
-//int32 valor_recarga = 0;
-int direccionI2C = 0x4E;
-int filas = 2;
-int columnas = 16;
+//int32 valor_recarga = 29285;
+int32 valor_recarga = 0;
 int pulsos_555 =  0;
 int1 bandera_prueba_555;
 int1 bandera_estado_555;
 int32 value;
 
-#INT_EXT2
+#INT_EXT
 void pulsos() {
    pulsos_555 = pulsos_555 + 1;
-   CLEAR_INTERRUPT(INT_EXT2);
+   CLEAR_INTERRUPT(INT_EXT);
 }
 
 #INT_RTCC 
 void tiempo_final_555() {
-   DISABLE_INTERRUPTS(INT_EXT2);// Inhabilitar las interrupciones del timer0
+   DISABLE_INTERRUPTS(INT_EXT);// Inhabilitar las interrupciones del timer0
    DISABLE_INTERRUPTS(INT_RTCC);
    bandera_prueba_555 = 0;
    if (pulsos_555 > 9) {
@@ -60,10 +55,10 @@ void main(){
       setup_oscillator(OSC_4MHZ);
       set_tris_a(0xff);// puerto a entrada
       set_tris_d(0x00);// puerto d salida
-      SETUP_COUNTERS(RTCC_INTERNAL,RTCC_DIV_256);
+      SETUP_COUNTERS(RTCC_INTERNAL,RTCC_DIV_32);
       ENABLE_INTERRUPTS(GLOBAL);// Habilita las interrupciones globales
       ext_int_edge(H_TO_L); //Inicia el flanco de la interruccion de alto abajo
-      lcd_init(direccionI2C,filas,columnas);
+      lcd_init();
       setup_adc_ports(0x0e);
       setup_adc(adc_clock_internal);
             /**
@@ -152,7 +147,7 @@ MENUPRINCIPAL:
                         SET_TIMER0(valor_recarga);
                         value=get_timer0();
                         ENABLE_INTERRUPTS(INT_RTCC);
-                        ENABLE_INTERRUPTS(INT_EXT2);// Habilita las interrupciones externas
+                        ENABLE_INTERRUPTS(INT_EXT);// Habilita las interrupciones externas
                         printf(lcd_putc,"\f"); //Limpiar la pantalla
                         lcd_gotoxy(0,1);
                         printf(lcd_putc," 555 Testing..."); //  escribir eso

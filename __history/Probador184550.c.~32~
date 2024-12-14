@@ -7,11 +7,8 @@
 //#include <lcd.c>
 #use fast_io(a)
 float Lecturaad620;
-int32 valor_recarga = 59285;
-//int32 valor_recarga = 0;
-int direccionI2C = 0x4E;
-int filas = 2;
-int columnas = 16;
+//int32 valor_recarga = 29285;
+int32 valor_recarga = 0;
 int pulsos_555 =  0;
 int1 bandera_prueba_555;
 int1 bandera_estado_555;
@@ -63,7 +60,7 @@ void main(){
       SETUP_COUNTERS(RTCC_INTERNAL,RTCC_DIV_256);
       ENABLE_INTERRUPTS(GLOBAL);// Habilita las interrupciones globales
       ext_int_edge(H_TO_L); //Inicia el flanco de la interruccion de alto abajo
-      lcd_init(direccionI2C,filas,columnas);
+      lcd_init();
       setup_adc_ports(0x0e);
       setup_adc(adc_clock_internal);
             /**

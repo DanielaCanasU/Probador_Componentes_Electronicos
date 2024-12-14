@@ -7,8 +7,8 @@
 //#include <lcd.c>
 #use fast_io(a)
 float Lecturaad620;
-int32 valor_recarga = 59285;
-//int32 valor_recarga = 0;
+//int32 valor_recarga = 29285;
+int32 valor_recarga = 0;
 int direccionI2C = 0x4E;
 int filas = 2;
 int columnas = 16;

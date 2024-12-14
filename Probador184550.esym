@@ -1,10 +1,10 @@
-f N "i" 1 681 ""
-D G "__PCH__" 1 681 ""5.076""
-D G "__DEVICE__" 1 681 "4550"
-D G "__DATE__" 1 681 ""14-Dec-24""
-D G "__TIME__" 1 681 ""14:33:41""
-D G "_UNICODE" 1 681 ""?""
-D G "__EVAL" 1 681 ""?"" "Standard Header file for the PIC18F4550 device ////////////////"
+f N "lcd_init" 2 139 ""
+D G "__PCH__" 0 280 ""5.076""
+D G "__DEVICE__" 0 280 "4550"
+D G "__DATE__" 0 280 ""14-Dec-24""
+D G "__TIME__" 0 280 ""19:33:02""
+D G "_UNICODE" 0 280 ""?""
+D G "__EVAL" 0 280 ""?"" "Standard Header file for the PIC18F4550 device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
 f N "set_tris_a" 1 45 ""
 v L "value" 1 45 "int8" `55 
@@ -910,7 +910,7 @@ f N "i2c_transfer_out" 1 684 ""
 v L "address" 1 684 "int8" `478 
 v L "wData" 1 684 "*int8" `479 
 v L "wCount" 1 684 "int8" `480 
-f B "i2c_transfer_out" 1 684 "void(int8 address,*int8 wData,int8 wCount)" `477 
+f B "i2c_transfer_out" 1 684 "void(int8 address,*int8 wData,int8 wCount,int8 data,int8 type)" `477 
 f N "i2c_transfer_out" 1 685 ""
 v L "stream" 1 685 "int8" `482 
 v L "address" 1 685 "int8" `483 
@@ -921,7 +921,7 @@ f N "i2c_transfer_in" 1 686 ""
 v L "address" 1 686 "int8" `487 
 v L "rData" 1 686 "*int8" `488 
 v L "rCount" 1 686 "int8" `489 
-f B "i2c_transfer_in" 1 686 "void(int8 address,*int8 rData,int8 rCount)" `486 
+f B "i2c_transfer_in" 1 686 "void(int8 address,*int8 rData,int8 rCount,int8 row)" `486 
 f N "i2c_transfer_in" 1 687 ""
 v L "stream" 1 687 "int8" `491 
 v L "address" 1 687 "int8" `492 
@@ -931,15 +931,15 @@ f B "i2c_transfer_in" 1 687 "void(int8 stream,int8 address,*int8 rData,int8 rCou
 f N "spi_xfer" 1 690 ""
 f B "spi_xfer" 1 690 "int8()" `495 
 f N "spi_xfer" 1 691 ""
-f G "spi_xfer" 1 691 "int16(int8 data)" `496 
+f G "spi_xfer" 1 691 "int16()" `496 
 f N "spi_xfer" 1 692 ""
-f G "spi_xfer" 1 692 "int32(int8 data)" `496 
+f G "spi_xfer" 1 692 "int32()" `496 
 f N "spi_xfer" 1 693 ""
 v L "data" 1 693 "int8" `497 
-f B "spi_xfer" 1 693 "int8(int8 data)" `496 
+f B "spi_xfer" 1 693 "int8(int8 data,int8 )" `496 
 f N "spi_xfer" 1 694 ""
 v L "data" 1 694 "int16" `499 
-f B "spi_xfer" 1 694 "int16(int16 data)" `498 
+f B "spi_xfer" 1 694 "int16(int16 data,int8 )" `498 
 f N "spi_xfer" 1 695 ""
 v L "data" 1 695 "int32" `501 
 f B "spi_xfer" 1 695 "int32(int32 data)" `500 
@@ -1032,15 +1032,15 @@ f B "spi_xfer_in" 1 719 "int8(int8 stream,int8 bits)" `555
 f N "spi_xfer_in" 1 720 ""
 v L "stream" 1 720 "int8" `556 
 v L "bits" 1 720 "int8" `560 
-f G "spi_xfer_in" 1 720 "int16(int8 stream,int8 bits,int8 task)" `558 
+f G "spi_xfer_in" 1 720 "int16(int8 stream,int8 bits,int8 LCD_BACKLIGHT)" `558 
 f N "spi_xfer_in" 1 721 ""
 v L "stream" 1 721 "int8" `556 
 v L "bits" 1 721 "int8" `560 
-f G "spi_xfer_in" 1 721 "int32(int8 stream,int8 bits,int8 task)" `558  "#use rtos() Prototypes:"
+f G "spi_xfer_in" 1 721 "int32(int8 stream,int8 bits,int8 LCD_BACKLIGHT)" `558  "#use rtos() Prototypes:"
 f N "rtos_run" 1 724 ""
-f B "rtos_run" 1 724 "void(int8 stream,int8 bits,int8 task)" `558 
+f B "rtos_run" 1 724 "void(int8 stream,int8 bits,int8 LCD_BACKLIGHT)" `558 
 f N "rtos_yield" 1 725 ""
-f B "rtos_yield" 1 725 "void(int8 bits,int8 task)" `559 
+f B "rtos_yield" 1 725 "void(int8 bits,int8 LCD_BACKLIGHT)" `559 
 f N "rtos_enable" 1 726 ""
 v L "task" 1 726 "int8" `561 
 f B "rtos_enable" 1 726 "void(int8 task)" `560 
@@ -1240,125 +1240,118 @@ d G "INT_EEPROM" 1 846 "0x00A010"
 d G "INT_OSCF" 1 847 "0x00A080"
 d G "INT_SPP" 1 848 "0x009D80"
 d G "INT_USB" 1 849 "0x00A020"
-D G "__LCD_C__" 2 76 ""
-C L "jump_to_isr" 2 2 2 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 1 "FUNCTION"
-C L "jump_to_isr" 2 2 2 "FUNCTION"
-T G "LCD_PIN_MAP" 2 90 "{int1 enable,int1 rs,int1 rw,int1 unused,int4 data}" `675  "this is to improve compatability with previous LCD drivers that accepted"
-D G "lcd_output_enable" 2 109 "(x) lcdlat.enable=x"
-D G "lcd_enable_tris" 2 110 "()   lcdtris.enable=0"
-D G "lcd_output_rs" 2 117 "(x) lcdlat.rs=x"
-D G "lcd_rs_tris" 2 118 "()   lcdtris.rs=0"
-D G "lcd_output_rw" 2 125 "(x) lcdlat.rw=x"
-D G "lcd_rw_tris" 2 126 "()   lcdtris.rw=0"
-D G "LCD_DATA_PORT" 2 149 "getenv("SFR:PORTD")" "portd"
-V G "lcd" 2 166 "LCD_PIN_MAP" `676 
-V G "lcdlat" 2 166 "LCD_PIN_MAP" `677 
-V G "lcdtris" 2 166 "LCD_PIN_MAP" `678 
-D G "LCD_TYPE" 2 179 "2" "0=5x7, 1=5x10, 2=2 lines"
-D G "LCD_LINE_TWO" 2 183 "0x40" "LCD RAM address for the second line"
-D G "LCD_LINE_LENGTH" 2 187 "20"
-F N "lcd_read_nibble" 2 190 ""
-f G "lcd_read_nibble" 2 190 "int8()" `679 
-F N "lcd_read_byte" 2 192 ""
-F G "lcd_read_byte" 2 193 "int8()" `680 
-V L "low" 2 194 "int8" `681 
-V L "high" 2 194 "int8" `682 
-F N "lcd_read_nibble" 2 239 ""
-F G "lcd_read_nibble" 2 240 "int8()" `679 
-F N "lcd_send_nibble" 2 256 ""
-V L "n" 2 256 "int8" `684 
-F G "lcd_send_nibble" 2 257 "void(int8 n)" `683 
-F N "lcd_send_byte" 2 274 ""
-V L "address" 2 274 "int8" `686 
-V L "n" 2 274 "int8" `687 
-F G "lcd_send_byte" 2 275 "void(int8 address,int8 n)" `685 
-F N "lcd_init" 2 299 ""
-F G "lcd_init" 2 300 "void()" `688 
-V L "i" 2 301 "int8" `689 
-V L "LCD_INIT_STRING" 2 302 "int8[4]" `690 
-C L "lcd_init" 2 2 2 "FUNCTION"
-F N "lcd_gotoxy" 2 345 ""
-V L "x" 2 345 "int8" `692 
-V L "y" 2 345 "int8" `693 
-F G "lcd_gotoxy" 2 346 "void(int8 x,int8 y)" `691 
-V L "address" 2 347 "int8" `694 
-F N "lcd_putc" 2 363 ""
-V L "c" 2 363 "int8" `696 
-F G "lcd_putc" 2 364 "void(int8 c)" `695 
-F N "lcd_getc" 2 406 ""
-V L "x" 2 406 "int8" `698 
-V L "y" 2 406 "int8" `699 
-F G "lcd_getc" 2 407 "int8(int8 x,int8 y)" `697 
-V L "value" 2 408 "int8" `700 
-C L "lcd_getc" 2 2 1 "FUNCTION"
-C L "lcd_set_cgram_char" 2 2 5 "FUNCTION"
-F N "lcd_set_cgram_char" 2 424 ""
-V L "which" 2 424 "int8" `702 
-V L "ptr" 2 424 "*int8" `703 
-F G "lcd_set_cgram_char" 2 425 "void(int8 which,*int8 ptr)" `701 
-V L "i" 2 426 "int8" `704 
-C L "lcd_set_cgram_char" 2 2 1 "FUNCTION"
-F N "lcd_cursor_on" 2 443 ""
-V L "on" 2 443 "int8" `706 
-F G "lcd_cursor_on" 2 444 "void(int8 on)" `705 
-C L "lcd_cursor_on" 2 2 1 "FUNCTION"
-C L "lcd_cursor_on" 2 2 1 "FUNCTION"
-V G "Lecturaad620" 0 7 "float" `707  "int32 valor_recarga = 29285;"
-V G "valor_recarga" 0 9 "int32" `708 
-V G "pulsos_555" 0 10 "int8" `709 
-V G "bandera_prueba_555" 0 11 "int1" `710 
-V G "bandera_estado_555" 0 12 "int1" `711 
-V G "value" 0 13 "int32" `712 
-F N "pulsos" 0 16 ""
-F G "pulsos" 0 16 "void()" `713 
-F N "tiempo_final_555" 0 22 ""
-F G "tiempo_final_555" 0 22 "void()" `714 
-C L "tiempo_final_555" 0 23 1 "FUNCTION"
-F N "Boton" 0 41 ""
-F G "Boton" 0 41 "int8()" `721 
-F N "MAIN" 0 53 ""
-F G "MAIN" 0 53 "void()" `722 
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 30 "FUNCTION"
-V L "valor_adc" 0 109 "float" `729 
-V L "lectura" 0 110 "float" `732 
-V L "Lecturaad620" 0 111 "float" `736 
-C L "MAIN" 0 23 2 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 8 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
-C L "MAIN" 0 23 1 "FUNCTION"
+C L "jump_to_isr" 2 2 47 "FUNCTION"
+V G "LCD_ADDR" 2 74 "int8" `669  "0x4E        //I2C slave address for LCD module"
+V G "lcd_total_rows" 2 75 "int8" `670  "2           //Number of rows: 1,2,3 or 4"
+V G "lcd_total_columns" 2 76 "int8" `671  "16          //Number of columns: 1...20"
+D G "RS" 2 78 "0b00000001" "P0 - PCF8574T Pin connected to RS"
+D G "RW" 2 79 "0b00000010" "P1 - PCF8574T Pin connected to RW"
+D G "ENABLE" 2 80 "0b00000100" "P2 - PCF8574T Pin connected to EN"
+D G "LCD_BACKLIGHT" 2 81 "0b00001000" "P3 - PCF8574T Pin connected to BACKLIGHT LED"
+D G "addr_row_one" 2 83 "0x00" "LCD RAM address for row 1"
+D G "addr_row_two" 2 84 "0x40" "LCD RAM address for row 2"
+D G "addr_row_three" 2 85 "0x14" "LCD RAM address for row 3"
+D G "addr_row_four" 2 86 "0x54" "LCD RAM address for row 4"
+D G "ON" 2 88 "1"
+D G "OFF" 2 89 "0"
+D G "NOT" 2 90 "~"
+D G "data_shifted" 2 91 "data<<4"
+V G "new_row_request" 2 94 "int8" `676 
+V G "BACKLIGHT_LED" 2 94 "int8" `677 
+F N "lcd_backlight_led" 2 96 ""
+V L "bl" 2 96 "int8" `679 
+F G "lcd_backlight_led" 2 97 "void(int8 bl)" `678 
+F N "i2c_send_nibble" 2 101 ""
+V L "data" 2 101 "int8" `681 
+V L "type" 2 101 "int8" `682 
+F G "i2c_send_nibble" 2 102 "void(int8 data,int8 type)" `680 
+F N "lcd_send_byte" 2 123 ""
+V L "data" 2 123 "int8" `684 
+V L "type" 2 123 "int8" `685 
+F G "lcd_send_byte" 2 124 "void(int8 data,int8 type)" `683 
+F N "lcd_clear" 2 132 ""
+F G "lcd_clear" 2 133 "void()" `686 
+F N "lcd_init" 2 139 ""
+V L "addr" 2 139 "int8" `688 
+V L "col" 2 139 "int8" `689 
+V L "row" 2 139 "int8" `690 
+F G "lcd_init" 2 140 "void(int8 addr,int8 col,int8 row)" `687 
+V L "i" 2 141 "int8" `691 
+V L "lcd_type" 2 142 "int8" `692 
+C L "lcd_init" 2 2 1 "FUNCTION"
+V L "LCD_INIT_STRING" 2 143 "[4]" `695 
+C L "lcd_init" 2 2 1 "FUNCTION"
+C L "lcd_init" 2 2 1 "FUNCTION"
+C L "lcd_init" 2 2 1 "FUNCTION"
+C L "lcd_init" 2 2 1 "FUNCTION"
+C L "lcd_init" 2 2 1 "FUNCTION"
+F N "lcd_gotoxy" 2 173 ""
+V L "x" 2 173 "int8" `698 
+V L "y" 2 173 "int8" `699 
+F G "lcd_gotoxy" 2 174 "void(int8 x,int8 y)" `697 
+V L "row" 2 175 "int8" `700 
+V L "column" 2 175 "int8" `701 
+V L "row_addr" 2 175 "int8" `702 
+V L "lcd_address" 2 175 "int8" `703 
+V L "data" 2 176 "int8" `704 
+C L "LCD_PUTC" 2 2 1 "FUNCTION"
+F N "LCD_PUTC" 2 195 ""
+V L "in_data" 2 195 "int8" `706 
+F G "LCD_PUTC" 2 196 "void(int8 in_data)" `705 
+V G "Lecturaad620" 0 9 "float" `711 
+V G "valor_recarga" 0 10 "int32" `712 
+V G "direccionI2C" 0 12 "int8" `713 
+V G "filas" 0 13 "int8" `714 
+V G "columnas" 0 14 "int8" `715 
+V G "pulsos_555" 0 15 "int8" `716 
+V G "bandera_prueba_555" 0 16 "int1" `717 
+V G "bandera_estado_555" 0 17 "int1" `718 
+V G "value" 0 18 "int32" `719 
+F N "pulsos" 0 21 ""
+F G "pulsos" 0 21 "void()" `720 
+F N "tiempo_final_555" 0 27 ""
+F G "tiempo_final_555" 0 27 "void()" `721 
+C L "tiempo_final_555" 0 7 1 "FUNCTION"
+F N "Boton" 0 46 ""
+F G "Boton" 0 46 "int8()" `728 
+F N "MAIN" 0 58 ""
+F G "MAIN" 0 58 "void()" `729 
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 30 "FUNCTION"
+V L "valor_adc" 0 114 "float" `736 
+V L "lectura" 0 115 "float" `739 
+V L "Lecturaad620" 0 116 "float" `743 
+C L "MAIN" 0 7 2 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 8 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
+C L "MAIN" 0 7 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep" 0 1
@@ -1498,5 +1491,16 @@ F B "spi_read2" 0 1
 F B "spi_write2" 1 2
 F B "spi_data_is_in2" 0 0
 F B "brownout_enable" 1 0
+F B "i2c_read" 0 2
+F B "i2c_write" 1 2
+F B "i2c_start" 0 2
+F B "i2c_stop" 0 1
+F B "i2c_isr_state" 0 1
+F B "i2c_transfer" 3 6
+F B "i2c_transfer_out" 3 4
+F B "i2c_transfer_in" 3 4
+F B "i2c_init" 1 2
+F B "delay_ms" 1 0
+F B "delay_us" 1 0
 F B "delay_ms" 1 0
 F B "delay_us" 1 0
