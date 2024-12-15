@@ -270,6 +270,7 @@ MENUPRINCIPAL:
                                  opambuenos = opambuenos + 1;
                             }   
                             if(opambuenos>=1){
+                                 opambuenos = 0;
                                  output_low(PIN_B7); // Colocar en bajo pin B0
                                  printf(lcd_putc,"\f"); //Limpiar la pantalla
                                  lcd_gotoxy(0,1);
@@ -277,7 +278,6 @@ MENUPRINCIPAL:
                                  lcd_gotoxy(0,2);
                                  printf(lcd_putc," Regresando...");
                                  delay_ms(1000);
-                                 opambuenos = 0;
                                  printf(lcd_putc,"\f");
                                  lcd_gotoxy(0,1);
                                  printf(lcd_putc," 1>555 2>LM224");

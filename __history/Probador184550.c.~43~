@@ -7,7 +7,11 @@
 //#include <lcd.c>
 #use fast_io(a)
 float Lecturaad620;
+<<<<<<< HEAD
 int32 valor_recarga = 62999;
+=======
+int32 valor_recarga = 63899;
+>>>>>>> cd3138fc7ff5b58fc0b3b761cf4ade4bde6dadd7
 //int32 valor_recarga = 0;
 int direccionI2C = 0x4E;
 int filas = 2;
@@ -192,6 +196,11 @@ MENUPRINCIPAL:
                               }
                            }
                         }
+<<<<<<< HEAD
+=======
+                        bandera_prueba_555 = 0;
+                        pulsos_555 = 0;
+>>>>>>> cd3138fc7ff5b58fc0b3b761cf4ade4bde6dadd7
                         printf(lcd_putc,"\f"); //Limpiar la pantalla
                         lcd_gotoxy(0,2);
                         printf(lcd_putc," Regresando...");
