@@ -11,12 +11,12 @@ Type=4
 1=Probador184550.c
 
 [defines]
-buildcount=22
+buildcount=25
 
 [ProjectLog]
 Days=1
 D1=14-12-2024
-D1_L=24
+D1_L=34
 D1_L1=[46839]Stopped Editing.
 D1_L2=[47115]Started Editing.
 D1_L3=[47814]Stopped Editing.
@@ -30,9 +30,9 @@ D1_L10=[51934]Started Editing.
 D1_L11=[52756]Stopped Editing.
 D1_L12=[66601]Started Editing.
 D1_L13=[66630]Stopped Editing.
-TotalEdit=68
+TotalEdit=106
 TotalDebug=0
-D1_E=68
+D1_E=106
 D1_D=0
 D1_L14=[66641]Started Editing.
 D1_L15=[66955]Stopped Editing.
@@ -45,15 +45,25 @@ D1_L21=[71000]Stopped Editing.
 D1_L22=[71822]Started Editing.
 D1_L23=[72216]Stopped Editing.
 D1_L24=[72769]Started Editing.
+D1_L25=[73117]Stopped Editing.
+D1_L26=[73844]Started Editing.
+D1_L27=[74226]Stopped Editing.
+D1_L28=[74352]Started Editing.
+D1_L29=[74466]Stopped Editing.
+D1_L30=[74466]Project Closed.
+D1_L31=[74501]Project Opened.
+D1_L32=[74519]Started Editing.
+D1_L33=[76211]Stopped Editing.
+D1_L34=[79137]Started Editing.
 
 [Opened Files]
 1=Probador184550.c
-t1=185
+t1=201
 2=..\..\..\Practica5.c
 t2=13
 3=..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18f4550.h
 t3=617
-Count=8
+Count=1
 4=..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
 t4=130
 5=i2c_Flex_LCD.c
