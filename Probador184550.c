@@ -16,6 +16,7 @@ int pulsos_555 =  0;
 int1 bandera_prueba_555;
 int1 bandera_estado_555;
 int32 value;
+int opambuenos = 0;
 
 #INT_EXT2
 void pulsos() {
@@ -225,19 +226,58 @@ MENUPRINCIPAL:
                 
                   if(Boton()==2){
                         while(1){
-                            output_high(PIN_B2); // Colocar en alto pin B0 
+                            output_high(PIN_B7); // Colocar en alto pin B7 
                             printf(lcd_putc,"\f"); //Limpiar la pantalla
                             lcd_gotoxy(0,1);
                             printf(lcd_putc," LM224 Testing..."); //  escribir eso
                             lcd_gotoxy(0,2);
                             printf(lcd_putc," 2>Volver");
                             delay_ms(1000);
-                            if(Boton()==2){
-                                 output_low(PIN_B2); // Colocar en bajo pin B0
+                            if(input(PIN_C0)==1){
+                                 printf(lcd_putc,"\f");
+                                 lcd_gotoxy(0,1);
+                                 printf(lcd_putc," AmpOp-1 Bueno!"); //  escribir eso
+                                 lcd_gotoxy(0,2);
+                                 printf(lcd_putc," LM224 Testing...");
+                                 delay_ms(500);
+                                 opambuenos = opambuenos + 1;
+                            }
+                            if(input(PIN_C1)==1){
+                                 printf(lcd_putc,"\f");
+                                 lcd_gotoxy(0,1);
+                                 printf(lcd_putc," AmpOp-2 Bueno!"); //  escribir eso
+                                 lcd_gotoxy(0,2);
+                                 printf(lcd_putc," LM224 Testing...");
+                                 delay_ms(500);
+                                 opambuenos = opambuenos + 1;
+                            }
+                            if(input(PIN_C2)==1){
+                                 printf(lcd_putc,"\f");
+                                 lcd_gotoxy(0,1);
+                                 printf(lcd_putc," AmpOp-3 Bueno!"); //  escribir eso
+                                 lcd_gotoxy(0,2);
+                                 printf(lcd_putc," LM224 Testing...");
+                                 delay_ms(500);
+                                 opambuenos = opambuenos + 1;
+                            } 
+                            if(input(PIN_D2)==1){
+                                 printf(lcd_putc,"\f");
+                                 lcd_gotoxy(0,1);
+                                 printf(lcd_putc," AmpOp-4 Bueno!"); //  escribir eso
+                                 lcd_gotoxy(0,2);
+                                 printf(lcd_putc," LM224 Testing...");
+                                 delay_ms(500);
+                                 opambuenos = opambuenos + 1;
+                            }   
+                            if(opambuenos>=1){
+                                 output_low(PIN_B7); // Colocar en bajo pin B0
                                  printf(lcd_putc,"\f"); //Limpiar la pantalla
+                                 lcd_gotoxy(0,1);
+                                 printf(lcd_putc," Buenos %i", opambuenos);
                                  lcd_gotoxy(0,2);
                                  printf(lcd_putc," Regresando...");
                                  delay_ms(1000);
+                                 opambuenos = 0;
                                  printf(lcd_putc,"\f");
                                  lcd_gotoxy(0,1);
                                  printf(lcd_putc," 1>555 2>LM224");
@@ -246,8 +286,7 @@ MENUPRINCIPAL:
                                 break;
                             }
                         } 
-                  }  
-
+                  }
                   if(Boton()==4){
                         while(1){
                         output_high(PIN_B1); // Colocar en alto pin B0 
@@ -282,7 +321,7 @@ MENUPRINCIPAL:
                         delay_ms(3000);
                         if(Boton()==4){
                             while(1){
-                            output_high(PIN_B2); // Colocar en alto pin B0 
+                            output_high(PIN_B7); // Colocar en alto pin B0 
                             printf(lcd_putc,"\f"); //Limpiar la pantalla
                             lcd_gotoxy(0,1);
                             printf(lcd_putc," LM324 Testing..."); //  escribir eso
@@ -290,7 +329,7 @@ MENUPRINCIPAL:
                             printf(lcd_putc," 2>Volver");
                             delay_ms(1000);
                                     if(Boton()==2){
-                                        output_low(PIN_B2); // Colocar en bajo pin B0
+                                        output_low(PIN_B7); // Colocar en bajo pin B0
                                         printf(lcd_putc,"\f"); //Limpiar la pantalla
                                         lcd_gotoxy(0,2);
                                         printf(lcd_putc," Regresando...");

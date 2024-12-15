@@ -1,32 +1,32 @@
 
-ROM used:   4440/32768 (14%)
-            4440/32768 (14%) including unused fragments
+ROM used:   4952/31936 (16%)
+            4952/31936 (16%) including unused fragments
 
-            3.2 Average locations per line
-            14.7 Average locations per statement
+            3.4 Average locations per line
+            14.5 Average locations per statement
 
-RAM used:   63/2048 (3%) at main() level
-            90/2048 (4%) worst case
+RAM used:   64/2036 (3%) at main() level
+            91/2036 (4%) worst case
 
 Stack used: 7 worst case (6 in main + 1 for interrupts)
-Stack size: 31
+Stack size: 30
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  312   226  75  Probador184550.c
-  852     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18f4550.h
-  213    77  25  ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\i2c_Flex_LCD.c
+  351   265  77  Probador184550.c
+  877     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18f4550.h
+  213    77  23  i2c_Flex_LCD.c
 ----- -----
- 1377   303 Total
+ 1441   342 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
-0     72   1    1             @I2C_WRITE_1
+0     72   1    1             @I2C_WRITE_129
 0     40   0    1             @delay_ms1
-0    144   2    3    574  5.9  i2c_send_nibble
+0    144   1    3    574  5.9  i2c_send_nibble
 0     78   1    3    149  2.8  lcd_send_byte
 0     20   0    0     61  1.9  lcd_clear
-0     20   0    0             @const695
+0     20   0    0             @const758
 0    166   2    5    902  5.8  lcd_init
 0     98   1    7    681  8.0  lcd_gotoxy
 0     66   1    1    310  5.9  LCD_PUTC
@@ -34,74 +34,83 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     12   0    0     43  1.8  pulsos
 0     26   0    0    154  3.1  tiempo_final_555
 0     54   1    0    193  2.6  Boton
-0   1686  19   13   8367  6.0  MAIN
-0     16   0    0             @const728
-0     32   0    2             @PSTRINGC_705
-0     16   0    0             @const733
+0   2050  21   13  10554  7.0  MAIN
+0     16   0    0             @const792
+0     32   0    2             @PSTRINGC_768
+0     16   0    0             @const797
 0     56   1    2             @ITOF
-0    242   3   11             @MULFF
-0     18   0    0             @const743
-0     16   0    0             @const744
-0     30   0    3             @PSTRINGCN_705
-0     64   1    5             @FTOSD
-0    142   2   13             @DIV3232
-0    378   4   13             @PRINTF_L32D_705FPFPF
-0     16   0    0             @const756
-0     16   0    0             @const757
-0     16   0    0             @const759
-0     18   0    0             @const760
-0     16   0    0             @const762
-0     10   0    0             @const763
-0     16   0    0             @const765
-0     18   0    0             @const766
-0      8   0    0             @const768
-0     40   0    3             @DIV88
-0    170   2    6             @PRINTF_D_705
-0     10   0    0             @const775
-0     16   0    0             @const777
-0     18   0    0             @const778
-0     10   0    0             @const780
-0     10   0    0             @const781
-0     16   0    0             @const783
-0     18   0    0             @const784
-0     16   0    0             @const786
-0     16   0    0             @const788
-0     18   0    0             @const789
-0     18   0    0             @const791
-0     10   0    0             @const792
-0     16   0    0             @const794
-0     16   0    0             @const796
-0     18   0    0             @const797
-0     16   0    0             @const799
-0     10   0    0             @const800
-0     16   0    0             @const802
-0     16   0    0             @const804
-0     18   0    0             @const805
+0    242   2   11             @MULFF
 0     18   0    0             @const807
-0     18   0    0             @const808
-0     18   0    0             @const810
-0     10   0    0             @const811
-0     16   0    0             @const813
+0     16   0    0             @const808
+0     30   0    3             @PSTRINGCN_768
+0     64   1    5             @FTOSD
+0    142   1   13             @DIV3232
+0    378   4   13             @PRINTF_L32D_768FPFPF
+0     16   0    0             @const820
+0     16   0    0             @const821
+0     16   0    0             @const823
+0     18   0    0             @const824
+0     16   0    0             @const826
+0     10   0    0             @const827
+0     16   0    0             @const829
+0     18   0    0             @const830
+0      8   0    0             @const832
+0     40   0    3             @DIV88
+0    170   2    6             @PRINTF_D_768
+0     10   0    0             @const839
+0     16   0    0             @const841
+0     18   0    0             @const842
+0     10   0    0             @const844
+0     10   0    0             @const845
+0     16   0    0             @const847
+0     18   0    0             @const848
+0     16   0    0             @const850
+0     16   0    0             @const852
+0     18   0    0             @const853
+0     18   0    0             @const855
+0     10   0    0             @const856
+0     16   0    0             @const858
+0     18   0    0             @const859
+0     16   0    0             @const861
+0     18   0    0             @const862
+0     16   0    0             @const864
+0     18   0    0             @const865
+0     16   0    0             @const867
+0     18   0    0             @const868
+0     12   0    0             @const870
+0     16   0    0             @const871
+0     16   0    0             @const873
+0     18   0    0             @const874
+0     16   0    0             @const876
+0     10   0    0             @const877
+0     16   0    0             @const879
+0     16   0    0             @const881
+0     18   0    0             @const882
+0     18   0    0             @const884
+0     18   0    0             @const885
+0     18   0    0             @const887
+0     10   0    0             @const888
+0     16   0    0             @const890
  Inline         0             @cinit1
 
 Program metrics:
     Functions               10
-    Statements              303
-    Comments                316
-    Volume (V)              14588
-    Difficulty (D)          42.6
-    Effort to implement (E) 620803
-    Time to implement (T)   9 hours, 35 minutes
-    Est Delivered Bugs (B)  2
-    Cyclomatic Complexity   39
-    Maintainability (MI)    110
+    Statements              342
+    Comments                320
+    Volume (V)              16928
+    Difficulty (D)          43.5
+    Effort to implement (E) 736183
+    Time to implement (T)   11 hours, 22 minutes
+    Est Delivered Bugs (B)  3
+    Cyclomatic Complexity   43
+    Maintainability (MI)    105
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
 00004-00006     0  4  
 00008-000B8   178  0  
-000BA-07FFE  4258  28324  
+000BA-07CBE  4770  26980  
 
 
 
