@@ -7,7 +7,7 @@
 //#include <lcd.c>
 #use fast_io(a)
 float Lecturaad620;
-int32 valor_recarga = 63999;
+int32 valor_recarga = 63899;
 //int32 valor_recarga = 0;
 int direccionI2C = 0x4E;
 int filas = 2;
@@ -192,6 +192,8 @@ MENUPRINCIPAL:
                               }
                            }
                         }
+                        bandera_prueba_555 = 0;
+                        pulsos_555 = 0;
                         printf(lcd_putc,"\f"); //Limpiar la pantalla
                         lcd_gotoxy(0,2);
                         printf(lcd_putc," Regresando...");
@@ -202,7 +204,7 @@ MENUPRINCIPAL:
                   
                   if(Boton()==2){
                         while(1){
-                            output_high(PIN_B2); // Colocar en alto pin B0 
+                            output_high(PIN_B7); // Colocar en alto pin B7 
                             printf(lcd_putc,"\f"); //Limpiar la pantalla
                             lcd_gotoxy(0,1);
                             printf(lcd_putc," LM224 Testing..."); //  escribir eso
@@ -210,7 +212,7 @@ MENUPRINCIPAL:
                             printf(lcd_putc," 2>Volver");
                             delay_ms(1000);
                             if(Boton()==2){
-                                output_low(PIN_B2); // Colocar en bajo pin B0
+                                output_low(PIN_B7); // Colocar en bajo pin B7
                                 printf(lcd_putc,"\f"); //Limpiar la pantalla
                                 lcd_gotoxy(0,2);
                                 printf(lcd_putc," Regresando...");
@@ -249,7 +251,7 @@ MENUPRINCIPAL:
                         delay_ms(3000);
                         if(Boton()==4){
                             while(1){
-                            output_high(PIN_B2); // Colocar en alto pin B0 
+                            output_high(PIN_B7); // Colocar en alto pin B0 
                             printf(lcd_putc,"\f"); //Limpiar la pantalla
                             lcd_gotoxy(0,1);
                             printf(lcd_putc," LM324 Testing..."); //  escribir eso
@@ -257,7 +259,7 @@ MENUPRINCIPAL:
                             printf(lcd_putc," 2>Volver");
                             delay_ms(1000);
                                     if(Boton()==2){
-                                        output_low(PIN_B2); // Colocar en bajo pin B0
+                                        output_low(PIN_B7); // Colocar en bajo pin B0
                                         printf(lcd_putc,"\f"); //Limpiar la pantalla
                                         lcd_gotoxy(0,2);
                                         printf(lcd_putc," Regresando...");

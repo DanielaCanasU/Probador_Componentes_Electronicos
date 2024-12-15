@@ -1,9 +1,21 @@
-Compiling C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550 on 14-dic.-24 at 20:12
+Compiling C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550 on 14-dic.-24 at 20:42
 >>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 111(1,1): Condition always TRUE
 >>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 144(1,1): Condition always TRUE
 >>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 175(1,1): Condition always TRUE
 >>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 188(1,1): Condition always TRUE
->>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 205(1,1): Condition always TRUE
->>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 225(1,1): Condition always TRUE
->>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 244(1,1): Condition always TRUE
->>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 252(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 206(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 226(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 245(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 253(1,1): Condition always TRUE
+>>> Warning 216 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 280(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
+>>> Warning 216 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 280(1,2): Interrupts disabled during call to prevent re-entrancy:  (@I2C_WRITE_129)
+>>> Warning 216 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 280(1,2): Interrupts disabled during call to prevent re-entrancy:  (i2c_send_nibble)
+>>> Warning 216 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 280(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_send_byte)
+>>> Warning 216 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 280(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_clear)
+>>> Warning 216 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 280(1,2): Interrupts disabled during call to prevent re-entrancy:  (LCD_PUTC)
+>>> Warning 216 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 280(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_gotoxy)
+>>> Warning 216 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 280(1,2): Interrupts disabled during call to prevent re-entrancy:  (@PSTRINGC_768)
+>>> Warning 202 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\i2c_Flex_LCD.c" Line 176(13,17): Variable never used:   data
+      Memory usage:   ROM=15%      RAM=3% - 5%
+      0 Errors,  17 Warnings.
+Build Successful.

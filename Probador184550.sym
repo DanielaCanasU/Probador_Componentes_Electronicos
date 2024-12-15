@@ -175,20 +175,20 @@ ROM Allocation:
 000A14  @PRINTF_D_768
 000AF6  @cinit1
 000AF6  MAIN
-000B2C  @cinit2
-05B5  MENUPRINCIPAL
+000B2E  @cinit2
+05B6  MENUPRINCIPAL
 
 Project Directory:
     C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\
 
 Project Files:
-    Probador184550.c                                        [14-dic.-24 20:08  CRC=C66CBF03]
+    Probador184550.c                                        [14-dic.-24 20:38  CRC=CBF42D36]
     ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18f4550.h [21-oct.-22 11:08  CRC=5418AFD6]
     i2c_Flex_LCD.c                                          [14-dic.-24 19:41  CRC=76E3ECE2]
 
-Source signature=084D489D
+Source signature=0DD4B6D0
 Program memory checksum=0000
-Hex file CRC=1A95
+Hex file CRC=B5A2
 
 Units:
     C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550 (main)

@@ -1,13 +1,21 @@
 #include <18f4550.h>
 #device ADC = 10
 #use i2c(Master,Fast=100000, sda=PIN_B0, scl=PIN_B1,force_sw)
+<<<<<<< HEAD
 #include <i2c_Flex_LCD1.c>
+=======
+#include <i2c_Flex_LCD.c>
+>>>>>>> bcc8ec84a88064d8ea3f062813fcb3a8a8d499b5
 #fuses intrc,nowdt
 #use delay(clock=4Mhz)
 //#include <lcd.c>
 #use fast_io(a)
 float Lecturaad620;
+<<<<<<< HEAD
 int32 valor_recarga = 59285;
+=======
+int32 valor_recarga = 49285;
+>>>>>>> bcc8ec84a88064d8ea3f062813fcb3a8a8d499b5
 //int32 valor_recarga = 0;
 int direccionI2C = 0x4E;
 int filas = 2;
