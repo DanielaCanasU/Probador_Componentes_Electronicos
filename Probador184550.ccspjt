@@ -14,9 +14,9 @@ Type=4
 buildcount=25
 
 [ProjectLog]
-Days=1
+Days=2
 D1=14-12-2024
-D1_L=34
+D1_L=35
 D1_L1=[46839]Stopped Editing.
 D1_L2=[47115]Started Editing.
 D1_L3=[47814]Stopped Editing.
@@ -30,7 +30,7 @@ D1_L10=[51934]Started Editing.
 D1_L11=[52756]Stopped Editing.
 D1_L12=[66601]Started Editing.
 D1_L13=[66630]Stopped Editing.
-TotalEdit=106
+TotalEdit=130
 TotalDebug=0
 D1_E=106
 D1_D=0
@@ -55,6 +55,12 @@ D1_L31=[74501]Project Opened.
 D1_L32=[74519]Started Editing.
 D1_L33=[76211]Stopped Editing.
 D1_L34=[79137]Started Editing.
+D1_L35=[79437]Stopped Editing.
+D2=15-12-2024
+D2_E=24
+D2_D=0
+D2_L=1
+D2_L1=[1232]Project Closed.
 
 [Opened Files]
 1=Probador184550.c
