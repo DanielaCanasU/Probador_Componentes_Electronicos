@@ -1,9 +1,10 @@
-D G "__PCH__" 0 281 ""5.076""
-D G "__DEVICE__" 0 281 "4550"
-D G "__DATE__" 0 281 ""14-Dec-24""
-D G "__TIME__" 0 281 ""19:58:38""
-D G "_UNICODE" 0 281 ""?""
-D G "__EVAL" 0 281 ""?"" "Standard Header file for the PIC18F4550 device ////////////////"
+f N "lcd_init" 2 139 ""
+D G "__PCH__" 0 282 ""5.076""
+D G "__DEVICE__" 0 282 "4550"
+D G "__DATE__" 0 282 ""14-Dec-24""
+D G "__TIME__" 0 282 ""20:13:40""
+D G "_UNICODE" 0 282 ""?""
+D G "__EVAL" 0 282 ""?"" "Standard Header file for the PIC18F4550 device ////////////////"
 c L "set_tris_a" 1 3 6 "FUNCTION"
 f N "set_tris_a" 1 45 ""
 v L "value" 1 45 "int8" `55 
@@ -909,7 +910,7 @@ f N "i2c_transfer_out" 1 684 ""
 v L "address" 1 684 "int8" `478 
 v L "wData" 1 684 "*int8" `479 
 v L "wCount" 1 684 "int8" `480 
-f B "i2c_transfer_out" 1 684 "void(int8 address,*int8 wData,int8 wCount)" `477 
+f B "i2c_transfer_out" 1 684 "void(int8 address,*int8 wData,int8 wCount,int8 type)" `477 
 f N "i2c_transfer_out" 1 685 ""
 v L "stream" 1 685 "int8" `482 
 v L "address" 1 685 "int8" `483 
@@ -930,9 +931,9 @@ f B "i2c_transfer_in" 1 687 "void(int8 stream,int8 address,*int8 rData,int8 rCou
 f N "spi_xfer" 1 690 ""
 f B "spi_xfer" 1 690 "int8()" `495 
 f N "spi_xfer" 1 691 ""
-f G "spi_xfer" 1 691 "int16(int8 data)" `496 
+f G "spi_xfer" 1 691 "int16(int8 )" `496 
 f N "spi_xfer" 1 692 ""
-f G "spi_xfer" 1 692 "int32(int8 data)" `496 
+f G "spi_xfer" 1 692 "int32(int8 )" `496 
 f N "spi_xfer" 1 693 ""
 v L "data" 1 693 "int8" `497 
 f B "spi_xfer" 1 693 "int8(int8 data)" `496 
@@ -958,7 +959,7 @@ f N "spi_xfer" 1 699 ""
 v L "stream" 1 699 "int8" `512 
 v L "data" 1 699 "int8" `513 
 v L "bits" 1 699 "int8" `514 
-f B "spi_xfer" 1 699 "int8(int8 stream,int8 data,int8 bits)" `511 
+f B "spi_xfer" 1 699 "int8(int8 stream,int8 data,int8 bits,float ,float )" `511 
 f N "spi_xfer" 1 700 ""
 v L "stream" 1 700 "int8" `516 
 v L "data" 1 700 "int16" `517 
@@ -1031,15 +1032,15 @@ f B "spi_xfer_in" 1 719 "int8(int8 stream,int8 bits)" `555
 f N "spi_xfer_in" 1 720 ""
 v L "stream" 1 720 "int8" `556 
 v L "bits" 1 720 "int8" `560 
-f G "spi_xfer_in" 1 720 "int16(int8 stream,int8 bits,int8 task)" `558 
+f G "spi_xfer_in" 1 720 "int16(int8 stream,int8 bits,int8 RW)" `558 
 f N "spi_xfer_in" 1 721 ""
 v L "stream" 1 721 "int8" `556 
 v L "bits" 1 721 "int8" `560 
-f G "spi_xfer_in" 1 721 "int32(int8 stream,int8 bits,int8 task)" `558  "#use rtos() Prototypes:"
+f G "spi_xfer_in" 1 721 "int32(int8 stream,int8 bits,int8 RW)" `558  "#use rtos() Prototypes:"
 f N "rtos_run" 1 724 ""
-f B "rtos_run" 1 724 "void(int8 stream,int8 bits,int8 task)" `558 
+f B "rtos_run" 1 724 "void(int8 stream,int8 bits,int8 RW)" `558 
 f N "rtos_yield" 1 725 ""
-f B "rtos_yield" 1 725 "void(int8 bits,int8 task)" `559 
+f B "rtos_yield" 1 725 "void(int8 bits,int8 RW)" `559 
 f N "rtos_enable" 1 726 ""
 v L "task" 1 726 "int8" `561 
 f B "rtos_enable" 1 726 "void(int8 task)" `560 

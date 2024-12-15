@@ -193,7 +193,6 @@ MENUPRINCIPAL:
                            }
                         }
                         bandera_prueba_555 = 0;
-                        pulsos_555 = 0;
                         printf(lcd_putc,"\f"); //Limpiar la pantalla
                         lcd_gotoxy(0,2);
                         printf(lcd_putc," Regresando...");
