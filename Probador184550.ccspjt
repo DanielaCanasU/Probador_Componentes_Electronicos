@@ -1,7 +1,7 @@
 [PROJECT]
 Target=Probador184550.hex
 Processor_Text=PIC18F4550
-CCSVersion=5.076
+CCSVersion=5.112
 Compiler=PCH
 [Target Data]
 FileList=Probador184550.c
@@ -11,12 +11,12 @@ Type=4
 1=Probador184550.c
 
 [defines]
-buildcount=18
+buildcount=27
 
 [ProjectLog]
 Days=1
 D1=14-12-2024
-D1_L=20
+D1_L=32
 D1_L1=[46839]Stopped Editing.
 D1_L2=[47115]Started Editing.
 D1_L3=[47814]Stopped Editing.
@@ -30,9 +30,9 @@ D1_L10=[51934]Started Editing.
 D1_L11=[52756]Stopped Editing.
 D1_L12=[66601]Started Editing.
 D1_L13=[66630]Stopped Editing.
-TotalEdit=68
+TotalEdit=83
 TotalDebug=0
-D1_E=68
+D1_E=83
 D1_D=0
 D1_L14=[66641]Started Editing.
 D1_L15=[66955]Stopped Editing.
@@ -41,15 +41,27 @@ D1_L17=[68666]Stopped Editing.
 D1_L18=[68863]Started Editing.
 D1_L19=[69926]Stopped Editing.
 D1_L20=[70336]Started Editing.
+D1_L21=[71277]Project Opened.
+D1_L22=[71356]Started Editing.
+D1_L23=[71664]Stopped Editing.
+D1_L24=[71835]Started Editing.
+D1_L25=[71970]Stopped Editing.
+D1_L26=[71970]Project Closed.
+D1_L27=[71992]Project Opened.
+D1_L28=[72136]Started Editing.
+D1_L29=[72801]Stopped Editing.
+D1_L30=[72801]Project Closed.
+D1_L31=[72924]Project Opened.
+D1_L32=[72947]Project Closed.
 
 [Opened Files]
 1=Probador184550.c
-t1=45
+t1=1
 2=..\..\..\Practica5.c
 t2=13
 3=..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18f4550.h
 t3=617
-Count=8
+Count=1
 4=..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
 t4=130
 5=i2c_Flex_LCD.c
