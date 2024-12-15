@@ -384,9 +384,7 @@ MENUPRINCIPAL:
                                     delay_ms(1000);
                                  }
                                  while(1) {
-                                    if(Boton() == 2){
-                                       NPN_estado == 1;
-                                       output_low(PIN_D0);
+                                    if(Boton() = 2){
                                        lcd_gotoxy(0,2);
                                        printf(lcd_putc," Regresando...");
                                        delay_ms(1000);

@@ -27,7 +27,7 @@ forcecoff=0
 [PROJECT]
 Target=Probador184550.hex
 Processor_Text=PIC18F4550
-CCSVersion=5.112
+CCSVersion=5.076
 Compiler=PCH
 [Target Data]
 FileList=Probador184550.c
@@ -37,10 +37,10 @@ Type=4
 1=Probador184550.c
 
 [defines]
-buildcount=25
+buildcount=33
 
 [ProjectLog]
-Days=1
+Days=2
 D1=14-12-2024
 D1_L=34
 D1_L1=[46839]Stopped Editing.
@@ -81,10 +81,18 @@ D1_L31=[74501]Project Opened.
 D1_L32=[74519]Started Editing.
 D1_L33=[76211]Stopped Editing.
 D1_L34=[79137]Started Editing.
+D2=15-12-2024
+D2_L=6
+D2_L1=[45775]Project Opened.
+D2_L2=[45833]Started Editing.
+D2_L3=[46373]Stopped Editing.
+D2_L4=[58641]Started Editing.
+D2_L5=[59241]Stopped Editing.
+D2_L6=[60039]Started Editing.
 
 [Opened Files]
 1=Probador184550.c
-t1=201
+t1=356
 2=..\..\..\Practica5.c
 t2=13
 3=..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18f4550.h

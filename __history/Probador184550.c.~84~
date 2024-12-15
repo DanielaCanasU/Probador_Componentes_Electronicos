@@ -345,7 +345,7 @@ MENUPRINCIPAL:
                            lcd_gotoxy(0,1);
                            printf(lcd_putc," 1>NPN 2>PNP");
                            lcd_gotoxy(0,2);
-                           printf(lcd_putc," 4>NADA 3>Regresar");
+                           printf(lcd_putc," 4>NADA 3>Pag.Sig.");
                            delay_ms(1000);
                            while(1){
                               if(Boton()==1) {
@@ -384,9 +384,7 @@ MENUPRINCIPAL:
                                     delay_ms(1000);
                                  }
                                  while(1) {
-                                    if(Boton() == 2){
-                                       NPN_estado == 1;
-                                       output_low(PIN_D0);
+                                    if(Boton() = 2){
                                        lcd_gotoxy(0,2);
                                        printf(lcd_putc," Regresando...");
                                        delay_ms(1000);
@@ -394,14 +392,14 @@ MENUPRINCIPAL:
                                        lcd_gotoxy(0,1);
                                        printf(lcd_putc," 1>NPN 2>PNP");
                                        lcd_gotoxy(0,2);
-                                       printf(lcd_putc," 4>NADA 3>Regresar");
+                                       printf(lcd_putc," 4>NADA 3>Pag.Sig.");
                                        delay_ms(1000);
                                        break;
                                     }
                                  }
                               }
-                              if(Boton() == 3) {
-                                 delay_ms(1000);
+                           }
+                              if(Boton() == 2) {
                                  break;
                               }
                            }
@@ -410,8 +408,6 @@ MENUPRINCIPAL:
                   }
                }
             }
-         }
+         }           
       }
-}   
-
 
