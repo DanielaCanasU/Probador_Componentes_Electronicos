@@ -1,21 +1,102 @@
-Compiling C:\Users\Persona\Documents\Universidad\Servicio\Probador_Componentes_Electronicos\Probador184550 on 14-Dec-24 at 19:58
->>> Warning 203 "Probador184550.c" Line 111(1,1): Condition always TRUE
->>> Warning 203 "Probador184550.c" Line 144(1,1): Condition always TRUE
->>> Warning 203 "Probador184550.c" Line 175(1,1): Condition always TRUE
->>> Warning 203 "Probador184550.c" Line 188(1,1): Condition always TRUE
->>> Warning 203 "Probador184550.c" Line 205(1,1): Condition always TRUE
->>> Warning 203 "Probador184550.c" Line 225(1,1): Condition always TRUE
->>> Warning 203 "Probador184550.c" Line 244(1,1): Condition always TRUE
->>> Warning 203 "Probador184550.c" Line 252(1,1): Condition always TRUE
->>> Warning 216 "Probador184550.c" Line 279(1,2): Interrupts disabled during call to prevent re-entrancy:  (@delay_ms1)
->>> Warning 216 "Probador184550.c" Line 279(1,2): Interrupts disabled during call to prevent re-entrancy:  (@I2C_WRITE_1)
->>> Warning 216 "Probador184550.c" Line 279(1,2): Interrupts disabled during call to prevent re-entrancy:  (i2c_send_nibble)
->>> Warning 216 "Probador184550.c" Line 279(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_send_byte)
->>> Warning 216 "Probador184550.c" Line 279(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_clear)
->>> Warning 216 "Probador184550.c" Line 279(1,2): Interrupts disabled during call to prevent re-entrancy:  (LCD_PUTC)
->>> Warning 216 "Probador184550.c" Line 279(1,2): Interrupts disabled during call to prevent re-entrancy:  (lcd_gotoxy)
->>> Warning 216 "Probador184550.c" Line 279(1,2): Interrupts disabled during call to prevent re-entrancy:  (@PSTRINGC_705)
->>> Warning 202 "C:\Program Files (x86)\PICC\Drivers\i2c_Flex_LCD.c" Line 176(13,17): Variable never used:   data
-      Memory usage:   ROM=15%      RAM=3% - 5%
-      0 Errors,  17 Warnings.
-Build Successful.
+Compiling C:\Users\Persona\Documents\Universidad\Servicio\Probador_Componentes_Electronicos\Probador184550 on 14-Dec-24 at 20:13
+*** Error 1 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(1,2): Illegal C character in input file  0x80
+*** Error 1 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(1,2): Illegal C character in input file  0x00
+*** Error 1 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(1,2): Illegal C character in input file  0x13
+*** Error 1 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(2,3): Illegal C character in input file  0x00
+*** Error 1 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(2,3): Illegal C character in input file  0x00
+*** Error 1 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(2,3): Illegal C character in input file  0xFF
+*** Error 1 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(2,3): Illegal C character in input file  0xFF
+*** Error 1 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(2,3): Illegal C character in input file  0xFF
+*** Error 1 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(2,3): Illegal C character in input file  0x00
+*** Error 1 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(2,3): Illegal C character in input file  0x06
+*** Error 1 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(2,3): Illegal C character in input file  0x00
+*** Error 1 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(2,3): Illegal C character in input file  0x00
+*** Error 1 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(2,3): Illegal C character in input file  0x00
+*** Error 1 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(2,3): Illegal C character in input file  0x00
+*** Error 1 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(2,3): Illegal C character in input file  0x00
+*** Error 1 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(2,3): Illegal C character in input file  0x00
+*** Error 1 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(2,3): Illegal C character in input file  0x00
+*** Error 32 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(1,2): Expecting a , or )
+*** Error 1 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(8,9): Illegal C character in input file  0x92
+*** Error 1 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(8,9): Illegal C character in input file  0xE3
+*** Error 1 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(8,9): Illegal C character in input file  0x11
+*** Error 43 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(8,9): Expecting a declaration
+*** Error 1 "C:\Program Files (x86)\PICC\Devices\18f4550.h" Line 681(11,12): Illegal C character in input file  0xD8
+*** Error 1 "Probador184550.c" Line 681(11,12): Illegal C character in input file  0xF4
+*** Error 51 "Probador184550.c" Line 20(0,1): A numeric expression must appear here
+*** Error 12 "Probador184550.c" Line 23(20,28): Undefined identifier   INT_EXT2
+*** Error 51 "Probador184550.c" Line 26(10,11): A numeric expression must appear here
+*** Error 12 "Probador184550.c" Line 28(23,31): Undefined identifier   INT_EXT2
+*** Error 12 "Probador184550.c" Line 29(23,31): Undefined identifier   INT_RTCC
+*** Error 12 "Probador184550.c" Line 39(20,28): Undefined identifier   INT_RTCC
+*** Error 12 "Probador184550.c" Line 40(11,19): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 41(14,15): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "Probador184550.c" Line 42(11,19): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 43(23,31): Undefined identifier   INT_RTCC
+*** Error 173 "Probador184550.c" Line 46(5,10): Functions may not be nested
+*** Error 127 "Probador184550.c" Line 48(13,19): Return value not allowed in void function
+*** Error 127 "Probador184550.c" Line 50(13,19): Return value not allowed in void function
+*** Error 127 "Probador184550.c" Line 52(13,19): Return value not allowed in void function
+*** Error 127 "Probador184550.c" Line 54(13,19): Return value not allowed in void function
+*** Error 127 "Probador184550.c" Line 56(13,19): Return value not allowed in void function
+*** Error 173 "Probador184550.c" Line 58(6,10): Functions may not be nested
+*** Error 12 "Probador184550.c" Line 64(25,31): Undefined identifier   GLOBAL
+*** Error 12 "Probador184550.c" Line 65(20,26): Undefined identifier   H_TO_L
+*** Error 12 "Probador184550.c" Line 104(18,26): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 105(21,22): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "Probador184550.c" Line 106(18,26): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 107(21,22): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "Probador184550.c" Line 108(18,26): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 110(19,20): Undefined identifier  -- Boton
+*** Error 12 "Probador184550.c" Line 119(24,32): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 120(27,28): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "Probador184550.c" Line 121(24,32): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 122(27,28): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "Probador184550.c" Line 124(24,32): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 138(25,26): Undefined identifier  -- Boton
+*** Error 12 "Probador184550.c" Line 143(20,21): Undefined identifier  -- Boton
+*** Error 12 "Probador184550.c" Line 145(26,34): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 146(29,30): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "Probador184550.c" Line 147(26,34): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 148(29,30): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "Probador184550.c" Line 149(26,34): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 150(27,28): Undefined identifier  -- Boton
+*** Error 12 "Probador184550.c" Line 154(43,51): Undefined identifier   INT_RTCC
+*** Error 12 "Probador184550.c" Line 155(43,51): Undefined identifier   INT_EXT2
+*** Error 12 "Probador184550.c" Line 156(32,40): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 157(35,36): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "Probador184550.c" Line 158(32,40): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 159(35,36): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "Probador184550.c" Line 160(32,40): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 163(37,38): Undefined identifier  -- Boton
+*** Error 12 "Probador184550.c" Line 170(38,46): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 171(41,42): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "Probador184550.c" Line 172(38,46): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 173(41,42): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "Probador184550.c" Line 174(38,46): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 176(42,43): Undefined identifier  -- Boton
+*** Error 12 "Probador184550.c" Line 183(38,46): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 184(41,42): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "Probador184550.c" Line 185(38,46): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 186(41,42): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "Probador184550.c" Line 187(38,46): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 189(42,43): Undefined identifier  -- Boton
+*** Error 12 "Probador184550.c" Line 196(32,40): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 197(35,36): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "Probador184550.c" Line 198(32,40): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 204(27,28): Undefined identifier  -- Boton
+*** Error 12 "Probador184550.c" Line 207(36,44): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 208(39,40): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "Probador184550.c" Line 209(36,44): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 210(39,40): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "Probador184550.c" Line 211(36,44): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 213(37,38): Undefined identifier  -- Boton
+*** Error 12 "Probador184550.c" Line 215(40,48): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 216(43,44): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "Probador184550.c" Line 217(40,48): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 224(27,28): Undefined identifier  -- Boton
+*** Error 12 "Probador184550.c" Line 227(32,40): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 228(35,36): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "Probador184550.c" Line 229(32,40): Undefined identifier   lcd_putc
+*** Error 12 "Probador184550.c" Line 230(35,36): Undefined identifier  -- lcd_gotoxy
+*** Error 12 "Probador184550.c" Line 231(32,40): Undefined identifier   lcd_putc
