@@ -17,7 +17,10 @@ int1 bandera_prueba_555;
 int1 bandera_estado_555;
 int32 value;
 int opambuenos = 0;
+<<<<<<< HEAD
+=======
 int1 NPN_estado;
+>>>>>>> 2b8d159640aedda8bb7d762f89569cb69bb369b8
 
 #INT_EXT2
 void pulsos() {
@@ -57,7 +60,10 @@ void main(){
       setup_oscillator(OSC_4MHZ);
       set_tris_a(0xff);// puerto a entrada
       set_tris_d(0x00);// puerto d salida
+<<<<<<< HEAD
+=======
       set_tris_c(0xff);// puerto c entrada
+>>>>>>> 2b8d159640aedda8bb7d762f89569cb69bb369b8
       SETUP_COUNTERS(RTCC_INTERNAL,RTCC_DIV_256);
       ENABLE_INTERRUPTS(GLOBAL);// Habilita las interrupciones globales
       ext_int_edge(H_TO_L); //Inicia el flanco de la interruccion de alto abajo
@@ -287,17 +293,48 @@ MENUPRINCIPAL:
                                  printf(lcd_putc," 4>741 3>Pag.Sig.");
                                 break;
                             }
+<<<<<<< HEAD
+                            if(Boton()==2){
+                             opambuenos = 0;
+                             output_low(PIN_B1); // Colocar en bajo pin B0
+                             printf(lcd_putc,"\f"); //Limpiar la pantalla
+                             lcd_gotoxy(0,2);
+                             printf(lcd_putc," Regresando...");
+                             delay_ms(500);
+                             printf(lcd_putc,"\f");
+                              lcd_gotoxy(0,1);
+                              printf(lcd_putc," 1>555 2>LM224");
+                              lcd_gotoxy(0,2);
+                              printf(lcd_putc," 4>741 3>Pag.Sig.");
+                             break;
+=======
+>>>>>>> 2b8d159640aedda8bb7d762f89569cb69bb369b8
                         } 
                   }
                   if(Boton()==4){
                         while(1){
+<<<<<<< HEAD
+                        output_high(PIN_B7); // Colocar en alto pin B7
+=======
                         output_high(PIN_B1); // Colocar en alto pin B0 
+>>>>>>> 2b8d159640aedda8bb7d762f89569cb69bb369b8
                         printf(lcd_putc,"\f"); //Limpiar la pantalla
                         lcd_gotoxy(0,1);
                         printf(lcd_putc," 741 Testing..."); //  escribir eso
                         lcd_gotoxy(0,2);
                         printf(lcd_putc," 2>Volver");
                         delay_ms(1000);
+<<<<<<< HEAD
+                        if(input(PIN_C0)==1){
+                                 printf(lcd_putc,"\f");
+                                 lcd_gotoxy(0,1);
+                                 printf(lcd_putc," AmpOp Bueno!"); //  escribir eso
+                                 lcd_gotoxy(0,2);
+                                 printf(lcd_putc," Regresando...");
+                                 delay_ms(500);
+                                 opambuenos = 0;
+                                 printf(lcd_putc,"\f");
+=======
                             if(Boton()==2){
                                 output_low(PIN_B1); // Colocar en bajo pin B0
                                 printf(lcd_putc,"\f"); //Limpiar la pantalla
@@ -305,12 +342,29 @@ MENUPRINCIPAL:
                                 printf(lcd_putc," Regresando...");
                                 delay_ms(1000);
                                 printf(lcd_putc,"\f");
+>>>>>>> 2b8d159640aedda8bb7d762f89569cb69bb369b8
                                  lcd_gotoxy(0,1);
                                  printf(lcd_putc," 1>555 2>LM224");
                                  lcd_gotoxy(0,2);
                                  printf(lcd_putc," 4>741 3>Pag.Sig.");
                                 break;
                             }
+<<<<<<< HEAD
+                         if(Boton()==2){
+                             output_low(PIN_B1); // Colocar en bajo pin B0
+                             printf(lcd_putc,"\f"); //Limpiar la pantalla
+                             lcd_gotoxy(0,2);
+                             printf(lcd_putc," Regresando...");
+                             delay_ms(500);
+                             printf(lcd_putc,"\f");
+                              lcd_gotoxy(0,1);
+                              printf(lcd_putc," 1>555 2>LM224");
+                              lcd_gotoxy(0,2);
+                              printf(lcd_putc," 4>741 3>Pag.Sig.");
+                             break;
+                           }
+=======
+>>>>>>> 2b8d159640aedda8bb7d762f89569cb69bb369b8
                         }   
                     }
                   if(Boton()==3){
@@ -319,6 +373,34 @@ MENUPRINCIPAL:
                         lcd_gotoxy(0,1);
                         printf(lcd_putc," 1>LM358 2>LM348");
                         lcd_gotoxy(0,2);
+<<<<<<< HEAD
+                        printf(lcd_putc," 4>LM324 3>RETURN");
+                        delay_ms(3000);
+                        if(Boton()==4){
+                            while(1){
+                               output_high(PIN_B7); // Colocar en alto pin B0 
+                               printf(lcd_putc,"\f"); //Limpiar la pantalla
+                               lcd_gotoxy(0,1);
+                               printf(lcd_putc," LM324 Testing..."); //  escribir eso
+                               lcd_gotoxy(0,2);
+                               printf(lcd_putc," 2>Volver");
+                               delay_ms(1000);
+                                if(Boton()==2){
+                                 output_low(PIN_B7); // Colocar en bajo pin B0
+                                 printf(lcd_putc,"\f"); //Limpiar la pantalla
+                                 lcd_gotoxy(0,2);
+                                 printf(lcd_putc," Regresando...");
+                                 delay_ms(1000);
+                                 break;
+                                }
+                            }   
+                        }
+                        if(Boton()==3){
+                            goto MENUPRINCIPAL;
+                        }
+                    }
+                }           
+=======
                         printf(lcd_putc," 4>LM324 3>Pag.Sig.");
                         delay_ms(1000);
                         if(Boton()==4){
@@ -406,8 +488,13 @@ MENUPRINCIPAL:
                         }
                      }
                   }
+>>>>>>> 2b8d159640aedda8bb7d762f89569cb69bb369b8
                }
             }
          }           
       }
+<<<<<<< HEAD
+   }
+=======
+>>>>>>> 2b8d159640aedda8bb7d762f89569cb69bb369b8
 }
