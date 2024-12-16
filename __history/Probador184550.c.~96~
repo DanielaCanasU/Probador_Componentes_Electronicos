@@ -445,8 +445,8 @@ MENUPRINCIPAL:
                                  }
                               }
                               if(Boton() == 3) {
-                                 delay_ms(500);
-                                 goto MENUPRINCIPAL;
+                                 delay_ms(1000);
+                                 break;
                               }
                            }
                         }

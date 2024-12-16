@@ -445,7 +445,6 @@ MENUPRINCIPAL:
                                  }
                               }
                               if(Boton() == 3) {
-                                 delay_ms(500);
                                  goto MENUPRINCIPAL;
                               }
                            }

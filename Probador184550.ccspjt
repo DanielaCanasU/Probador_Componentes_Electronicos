@@ -27,7 +27,7 @@ forcecoff=0
 [PROJECT]
 Target=Probador184550.hex
 Processor_Text=PIC18F4550
-CCSVersion=5.076
+CCSVersion=5.112
 Compiler=PCH
 [Target Data]
 FileList=Probador184550.c
@@ -38,7 +38,7 @@ Type=4
 
 [defines]
 <<<<<<< HEAD
-buildcount=35
+buildcount=47
 =======
 buildcount=33
 >>>>>>> 2b8d159640aedda8bb7d762f89569cb69bb369b8
@@ -60,7 +60,7 @@ D1_L10=[51934]Started Editing.
 D1_L11=[52756]Stopped Editing.
 D1_L12=[66601]Started Editing.
 D1_L13=[66630]Stopped Editing.
-TotalEdit=129
+TotalEdit=163
 TotalDebug=0
 D1_E=106
 D1_D=0
@@ -87,16 +87,23 @@ D1_L33=[76211]Stopped Editing.
 D1_L34=[79137]Started Editing.
 D2=15-12-2024
 <<<<<<< HEAD
-D2_L=7
+D2_L=14
 D2_L1=[62108]Project Opened.
 D2_L2=[62260]Started Editing.
 D2_L3=[63080]Stopped Editing.
 D2_L4=[63180]Started Editing.
 D2_L5=[64307]Stopped Editing.
-D2_E=23
+D2_E=57
 D2_D=0
 D2_L6=[72190]Project Closed.
 D2_L7=[72200]Project Opened.
+D2_L8=[72455]Started Editing.
+D2_L9=[73880]Stopped Editing.
+D2_L10=[73947]Started Editing.
+D2_L11=[74586]Stopped Editing.
+D2_L12=[75111]Started Editing.
+D2_L13=[75682]Stopped Editing.
+D2_L14=[75682]Project Closed.
 
 [Opened Files]
 1=Probador184550.c
@@ -112,7 +119,7 @@ D2_L6=[60039]Started Editing.
 
 [Opened Files]
 1=Probador184550.c
-t1=356
+t1=440
 >>>>>>> 2b8d159640aedda8bb7d762f89569cb69bb369b8
 2=..\..\..\Practica5.c
 t2=13

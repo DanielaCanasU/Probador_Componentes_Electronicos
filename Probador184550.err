@@ -1,35 +1,19 @@
-<<<<<<< HEAD
-Compiling C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550 on 15-dic.-24 at 17:46
->>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 106(1,1): Condition always TRUE
+Compiling C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550 on 15-dic.-24 at 21:01
 >>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 108(1,1): Condition always TRUE
->>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 153(1,1): Condition always TRUE
->>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 184(1,1): Condition always TRUE
->>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 202(1,1): Condition always TRUE
->>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 228(1,1): Condition always TRUE
->>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 305(1,1): Condition always TRUE
->>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 345(1,1): Condition always TRUE
->>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 353(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 110(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 140(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 171(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 189(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 215(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 278(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 317(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 325(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 394(1,1): Condition always TRUE
+>>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 416(1,1): Condition always TRUE
+>>> Warning 201 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 417(1,1): Assignment inside relational expression
+>>> Warning 203 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 430(1,1): Condition always TRUE
+>>> Warning 207 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550.c" Line 432(1,1): Code has no effect
 >>> Warning 202 "C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\i2c_Flex_LCD.c" Line 176(13,17): Variable never used:   data
-      Memory usage:   ROM=16%      RAM=3% - 4%
-      0 Errors,  10 Warnings.
-=======
-Compiling C:\Users\Persona\Documents\Universidad\Servicio\Probador_Componentes_Electronicos\Probador184550 on 15-Dec-24 at 17:01
->>> Warning 203 "Probador184550.c" Line 108(1,1): Condition always TRUE
->>> Warning 203 "Probador184550.c" Line 110(1,1): Condition always TRUE
->>> Warning 203 "Probador184550.c" Line 155(1,1): Condition always TRUE
->>> Warning 203 "Probador184550.c" Line 186(1,1): Condition always TRUE
->>> Warning 203 "Probador184550.c" Line 204(1,1): Condition always TRUE
->>> Warning 203 "Probador184550.c" Line 230(1,1): Condition always TRUE
->>> Warning 203 "Probador184550.c" Line 293(1,1): Condition always TRUE
->>> Warning 203 "Probador184550.c" Line 317(1,1): Condition always TRUE
->>> Warning 203 "Probador184550.c" Line 325(1,1): Condition always TRUE
->>> Warning 203 "Probador184550.c" Line 350(1,1): Condition always TRUE
->>> Warning 203 "Probador184550.c" Line 372(1,1): Condition always TRUE
->>> Warning 201 "Probador184550.c" Line 373(1,1): Assignment inside relational expression
->>> Warning 203 "Probador184550.c" Line 386(1,1): Condition always TRUE
->>> Warning 207 "Probador184550.c" Line 388(1,1): Code has no effect
->>> Warning 202 "C:\Program Files (x86)\PICC\Drivers\i2c_Flex_LCD.c" Line 176(13,17): Variable never used:   data
-      Memory usage:   ROM=17%      RAM=3% - 4%
+      Memory usage:   ROM=19%      RAM=3% - 4%
       0 Errors,  15 Warnings.
->>>>>>> 2b8d159640aedda8bb7d762f89569cb69bb369b8
 Build Successful.
