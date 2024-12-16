@@ -16,6 +16,8 @@ int pulsos_555 =  0;
 int1 bandera_prueba_555;
 int1 bandera_estado_555;
 int32 value;
+int opambuenos = 0;
+int1 NPN_estado;
 
 #INT_EXT2
 void pulsos() {
@@ -55,6 +57,7 @@ void main(){
       setup_oscillator(OSC_4MHZ);
       set_tris_a(0xff);// puerto a entrada
       set_tris_d(0x00);// puerto d salida
+      set_tris_c(0xff);// puerto c entrada
       SETUP_COUNTERS(RTCC_INTERNAL,RTCC_DIV_256);
       ENABLE_INTERRUPTS(GLOBAL);// Habilita las interrupciones globales
       ext_int_edge(H_TO_L); //Inicia el flanco de la interruccion de alto abajo
@@ -108,29 +111,14 @@ MENUPRINCIPAL:
                   set_adc_channel(0);
                   delay_us(20);
                   float valor_adc = read_adc();
-                  float lectura= valor_adc*0.004886; 
+                  float lectura= valor_adc*0.004886;
                   float Lecturaad620=lectura;
-                  output_high(PIN_B0); // Colocar en alto pin B0 
-                   //output_high(PIN_B1);
                   printf(lcd_putc,"\f"); //Limpiar la pantalla
                   lcd_gotoxy(0,1);
                   printf(lcd_putc," AD620 Testing..."); //  escribir eso
                   lcd_gotoxy(0,2);
-                  //printf(lcd_putc,"\f");
                   printf(lcd_putc," V:%0.2f. 2>Ret",Lecturaad620);
                   delay_ms(500);
-                  /**
-                  if(ad620Bueno==1){
-                       lcd_gotoxy(0,2);
-                       printf(lcd_putc," 1>Buenardo 3>return");
-                       delay_ms(3000);
-                       }
-                   else {
-                       lcd_gotoxy(0,2);
-                       printf(lcd_putc," 1>Dañao 3>return");
-                       delay_ms(3000);
-                       }
-                   **/
                   if(Boton()==2){
                      printf(lcd_putc,"\f");
                      lcd_gotoxy(0,1);
@@ -237,40 +225,46 @@ MENUPRINCIPAL:
                                  lcd_gotoxy(0,1);
                                  printf(lcd_putc," AmpOp-1 Bueno!"); //  escribir eso
                                  lcd_gotoxy(0,2);
-                                 printf(lcd_putc," 2>Volver");
+                                 printf(lcd_putc," LM224 Testing...");
                                  delay_ms(500);
-                                 
+                                 opambuenos = opambuenos + 1;
                             }
                             if(input(PIN_C1)==1){
                                  printf(lcd_putc,"\f");
                                  lcd_gotoxy(0,1);
                                  printf(lcd_putc," AmpOp-2 Bueno!"); //  escribir eso
                                  lcd_gotoxy(0,2);
-                                 printf(lcd_putc," 2>Volver");
+                                 printf(lcd_putc," LM224 Testing...");
                                  delay_ms(500);
+                                 opambuenos = opambuenos + 1;
                             }
                             if(input(PIN_C2)==1){
                                  printf(lcd_putc,"\f");
                                  lcd_gotoxy(0,1);
                                  printf(lcd_putc," AmpOp-3 Bueno!"); //  escribir eso
                                  lcd_gotoxy(0,2);
-                                 printf(lcd_putc," 2>Volver");
+                                 printf(lcd_putc," LM224 Testing...");
                                  delay_ms(500);
+                                 opambuenos = opambuenos + 1;
                             } 
-                            if(input(PIN_D0)==1){
+                            if(input(PIN_C5)==1){
                                  printf(lcd_putc,"\f");
                                  lcd_gotoxy(0,1);
-                                 printf(lcd_putc," AmpOp-3 Bueno!"); //  escribir eso
+                                 printf(lcd_putc," AmpOp-4 Bueno!"); //  escribir eso
                                  lcd_gotoxy(0,2);
-                                 printf(lcd_putc," 2>Volver");
+                                 printf(lcd_putc," LM224 Testing...");
                                  delay_ms(500);
+                                 opambuenos = opambuenos + 1;
                             }   
-                            if(Boton()==2){
+                            if(opambuenos>=1){
                                  output_low(PIN_B7); // Colocar en bajo pin B0
                                  printf(lcd_putc,"\f"); //Limpiar la pantalla
+                                 lcd_gotoxy(0,1);
+                                 printf(lcd_putc," Buenos %i", opambuenos);
                                  lcd_gotoxy(0,2);
                                  printf(lcd_putc," Regresando...");
                                  delay_ms(1000);
+                                 opambuenos = 0;
                                  printf(lcd_putc,"\f");
                                  lcd_gotoxy(0,1);
                                  printf(lcd_putc," 1>555 2>LM224");
@@ -279,30 +273,44 @@ MENUPRINCIPAL:
                                 break;
                             }
                         } 
-                  }  
-
+                  }
                   if(Boton()==4){
                         while(1){
-                        output_high(PIN_B1); // Colocar en alto pin B0 
+                        output_high(PIN_B7); // Colocar en alto pin B0 
                         printf(lcd_putc,"\f"); //Limpiar la pantalla
                         lcd_gotoxy(0,1);
                         printf(lcd_putc," 741 Testing..."); //  escribir eso
                         lcd_gotoxy(0,2);
                         printf(lcd_putc," 2>Volver");
                         delay_ms(1000);
-                            if(Boton()==2){
-                                output_low(PIN_B1); // Colocar en bajo pin B0
-                                printf(lcd_putc,"\f"); //Limpiar la pantalla
-                                lcd_gotoxy(0,2);
-                                printf(lcd_putc," Regresando...");
-                                delay_ms(1000);
-                                printf(lcd_putc,"\f");
+                        if(input(PIN_C1)==1){
+                                 printf(lcd_putc,"\f");
+                                 lcd_gotoxy(0,1);
+                                 printf(lcd_putc," AmpOp Bueno!"); //  escribir eso
+                                 lcd_gotoxy(0,2);
+                                 printf(lcd_putc," Regresando...");
+                                 delay_ms(500);
+                                 printf(lcd_putc,"\f");
                                  lcd_gotoxy(0,1);
                                  printf(lcd_putc," 1>555 2>LM224");
                                  lcd_gotoxy(0,2);
                                  printf(lcd_putc," 4>741 3>Pag.Sig.");
+                                 output_low(PIN_B7);
                                 break;
-                            }
+                        }
+                        if(Boton()==2){
+                             output_low(PIN_B7); // Colocar en bajo pin B0
+                             printf(lcd_putc,"\f"); //Limpiar la pantalla
+                             lcd_gotoxy(0,2);
+                             printf(lcd_putc," Regresando...");
+                             delay_ms(500);
+                             printf(lcd_putc,"\f");
+                             lcd_gotoxy(0,1);
+                             printf(lcd_putc," 1>555 2>LM224");
+                             lcd_gotoxy(0,2);
+                             printf(lcd_putc," 4>741 3>Pag.Sig.");
+                             break;
+                         }
                         }   
                     }
                   if(Boton()==3){
@@ -311,34 +319,141 @@ MENUPRINCIPAL:
                         lcd_gotoxy(0,1);
                         printf(lcd_putc," 1>LM358 2>LM348");
                         lcd_gotoxy(0,2);
-                        printf(lcd_putc," 4>LM324 3>RETURN");
-                        delay_ms(3000);
+                        printf(lcd_putc," 4>LM324 3>Pag.Sig.");
+                        delay_ms(1000);
                         if(Boton()==4){
-                            while(1){
-                            output_high(PIN_B7); // Colocar en alto pin B0 
-                            printf(lcd_putc,"\f"); //Limpiar la pantalla
-                            lcd_gotoxy(0,1);
-                            printf(lcd_putc," LM324 Testing..."); //  escribir eso
-                            lcd_gotoxy(0,2);
-                            printf(lcd_putc," 2>Volver");
-                            delay_ms(1000);
-                                    if(Boton()==2){
-                                        output_low(PIN_B7); // Colocar en bajo pin B0
-                                        printf(lcd_putc,"\f"); //Limpiar la pantalla
-                                        lcd_gotoxy(0,2);
-                                        printf(lcd_putc," Regresando...");
-                                        delay_ms(1000);
-                                        break;
-                                    }
-                            }   
+                              while(1){
+                                  output_high(PIN_B7); // Colocar en alto pin B7 
+                                  printf(lcd_putc,"\f"); //Limpiar la pantalla
+                                  lcd_gotoxy(0,1);
+                                  printf(lcd_putc," LM324 Testing..."); //  escribir eso
+                                  lcd_gotoxy(0,2);
+                                  printf(lcd_putc," 2>Volver");
+                                  delay_ms(1000);
+                                  if(input(PIN_C0)==1){
+                                       printf(lcd_putc,"\f");
+                                       lcd_gotoxy(0,1);
+                                       printf(lcd_putc," AmpOp-1 Bueno!"); //  escribir eso
+                                       lcd_gotoxy(0,2);
+                                       printf(lcd_putc," LM324 Testing...");
+                                       delay_ms(500);
+                                       opambuenos = opambuenos + 1;
+                                  }
+                                  if(input(PIN_C1)==1){
+                                       printf(lcd_putc,"\f");
+                                       lcd_gotoxy(0,1);
+                                       printf(lcd_putc," AmpOp-2 Bueno!"); //  escribir eso
+                                       lcd_gotoxy(0,2);
+                                       printf(lcd_putc," LM324 Testing...");
+                                       delay_ms(500);
+                                       opambuenos = opambuenos + 1;
+                                  }
+                                  if(input(PIN_C2)==1){
+                                       printf(lcd_putc,"\f");
+                                       lcd_gotoxy(0,1);
+                                       printf(lcd_putc," AmpOp-3 Bueno!"); //  escribir eso
+                                       lcd_gotoxy(0,2);
+                                       printf(lcd_putc," LM324 Testing...");
+                                       delay_ms(500);
+                                       opambuenos = opambuenos + 1;
+                                  } 
+                                  if(input(PIN_C5)==1){
+                                       printf(lcd_putc,"\f");
+                                       lcd_gotoxy(0,1);
+                                       printf(lcd_putc," AmpOp-4 Bueno!"); //  escribir eso
+                                       lcd_gotoxy(0,2);
+                                       printf(lcd_putc," LM324 Testing...");
+                                       delay_ms(500);
+                                       opambuenos = opambuenos + 1;
+                                  }   
+                                  if(opambuenos>=1){
+                                       output_low(PIN_B7); // Colocar en bajo pin B0
+                                       printf(lcd_putc,"\f"); //Limpiar la pantalla
+                                       lcd_gotoxy(0,1);
+                                       printf(lcd_putc," Buenos %i", opambuenos);
+                                       lcd_gotoxy(0,2);
+                                       printf(lcd_putc," Regresando...");
+                                       delay_ms(1000);
+                                       opambuenos = 0;
+                                       printf(lcd_putc,"\f");
+                                       lcd_gotoxy(0,1);
+                                       printf(lcd_putc," 1>LM358 2>LM348");
+                                       lcd_gotoxy(0,2);
+                                       printf(lcd_putc," 4>LM324 3>Pag.Sig.");
+                                      break;
+                                  }
+                              } 
                         }
                         if(Boton()==3){
-                            goto MENUPRINCIPAL;
+                           printf(lcd_putc,"\f");
+                           lcd_gotoxy(0,1);
+                           printf(lcd_putc," 1>NPN 2>PNP");
+                           lcd_gotoxy(0,2);
+                           printf(lcd_putc," 4>NADA 3>Regresar");
+                           delay_ms(1000);
+                           while(1){
+                              if(Boton()==1) {
+                                 NPN_estado = 1;
+                                 printf(lcd_putc,"\f");
+                                 lcd_gotoxy(0,1);
+                                 printf(lcd_putc,"NPN Testing...");
+                                 delay_ms(1000);
+                                 if (input(PIN_C6) == 0) {
+                                    NPN_estado = 0;
+                                 }
+                                 output_high(PIN_D0);
+                                 delay_ms(1500);
+                                 if (input(PIN_C6) == 1) {
+                                    NPN_estado = 0;
+                                 }
+                                 if (NPN_estado == 1) {
+                                    printf(lcd_putc,"\f");
+                                    lcd_gotoxy(0,1);
+                                    printf(lcd_putc,"NPN BUENO");
+                                    lcd_gotoxy(0,2);
+                                    printf(lcd_putc," 2>Volver");
+                                    delay_ms(1000);
+                                    while(1) {
+                                       if( Boton() = 2){
+                                          break;
+                                       }
+                                    }
+                                 }
+                                 if (NPN_estado == 0) {
+                                    printf(lcd_putc,"\f");
+                                    lcd_gotoxy(0,1);
+                                    printf(lcd_putc,"NPN MALO");
+                                    lcd_gotoxy(0,2);
+                                    printf(lcd_putc," 2>Volver");
+                                    delay_ms(1000);
+                                 }
+                                 while(1) {
+                                    if(Boton() == 2){
+                                       NPN_estado == 1;
+                                       output_low(PIN_D0);
+                                       lcd_gotoxy(0,2);
+                                       printf(lcd_putc," Regresando...");
+                                       delay_ms(1000);
+                                       printf(lcd_putc,"\f");
+                                       lcd_gotoxy(0,1);
+                                       printf(lcd_putc," 1>NPN 2>PNP");
+                                       lcd_gotoxy(0,2);
+                                       printf(lcd_putc," 4>NADA 3>Regresar");
+                                       delay_ms(1000);
+                                       break;
+                                    }
+                                 }
+                              }
+                              if(Boton() == 3) {
+                                 delay_ms(500);
+                                 goto MENUPRINCIPAL;
+                              }
+                           }
                         }
-                    }
-                }           
+                     }
+                  }
                }
             }
-         }           
+         }
       }
-}
+}   

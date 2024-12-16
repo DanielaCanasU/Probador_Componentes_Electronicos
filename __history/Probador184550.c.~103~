@@ -415,7 +415,7 @@ MENUPRINCIPAL:
                                     printf(lcd_putc," 2>Volver");
                                     delay_ms(1000);
                                     while(1) {
-                                       if( Boton() == 2){
+                                       if( Boton() = 2){
                                           break;
                                        }
                                     }
@@ -452,12 +452,12 @@ MENUPRINCIPAL:
                                  lcd_gotoxy(0,1);
                                  printf(lcd_putc,"PNP Testing...");
                                  delay_ms(1000);
-                                 if (input(PIN_C7) == 0) {
+                                 if (input(PIN_C6) == 0) {
                                     PNP_estado = 0;
                                  }
-                                 output_high(PIN_D1);
+                                 output_high(PIN_D0);
                                  delay_ms(1500);
-                                 if (input(PIN_C7) == 1) {
+                                 if (input(PIN_C6) == 1) {
                                     PNP_estado = 0;
                                  }
                                  if (PNP_estado == 1) {
@@ -468,7 +468,7 @@ MENUPRINCIPAL:
                                     printf(lcd_putc," 2>Volver");
                                     delay_ms(1000);
                                     while(1) {
-                                       if( Boton() == 2){
+                                       if( Boton() = 2){
                                           break;
                                        }
                                     }
@@ -484,7 +484,7 @@ MENUPRINCIPAL:
                                  while(1) {
                                     if(Boton() == 2){
                                        PNP_estado == 1;
-                                       output_low(PIN_D1);
+                                       output_low(PIN_D0);
                                        lcd_gotoxy(0,2);
                                        printf(lcd_putc," Regresando...");
                                        delay_ms(1000);

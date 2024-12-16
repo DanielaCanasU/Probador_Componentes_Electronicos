@@ -18,7 +18,6 @@ int1 bandera_estado_555;
 int32 value;
 int opambuenos = 0;
 int1 NPN_estado;
-int1 PNP_estado;
 
 #INT_EXT2
 void pulsos() {
@@ -415,7 +414,7 @@ MENUPRINCIPAL:
                                     printf(lcd_putc," 2>Volver");
                                     delay_ms(1000);
                                     while(1) {
-                                       if( Boton() == 2){
+                                       if( Boton() = 2){
                                           break;
                                        }
                                     }
@@ -445,62 +444,6 @@ MENUPRINCIPAL:
                                     }
                                  }
                               }
-                              
-                              if(Boton() == 2) {
-                                 PNP_estado = 1;
-                                 printf(lcd_putc,"\f");
-                                 lcd_gotoxy(0,1);
-                                 printf(lcd_putc,"PNP Testing...");
-                                 delay_ms(1000);
-                                 if (input(PIN_C7) == 0) {
-                                    PNP_estado = 0;
-                                 }
-                                 output_high(PIN_D1);
-                                 delay_ms(1500);
-                                 if (input(PIN_C7) == 1) {
-                                    PNP_estado = 0;
-                                 }
-                                 if (PNP_estado == 1) {
-                                    printf(lcd_putc,"\f");
-                                    lcd_gotoxy(0,1);
-                                    printf(lcd_putc,"PNP BUENO");
-                                    lcd_gotoxy(0,2);
-                                    printf(lcd_putc," 2>Volver");
-                                    delay_ms(1000);
-                                    while(1) {
-                                       if( Boton() == 2){
-                                          break;
-                                       }
-                                    }
-                                 }
-                                 if (PNP_estado == 0) {
-                                    printf(lcd_putc,"\f");
-                                    lcd_gotoxy(0,1);
-                                    printf(lcd_putc,"PNP MALO");
-                                    lcd_gotoxy(0,2);
-                                    printf(lcd_putc," 2>Volver");
-                                    delay_ms(1000);
-                                 }
-                                 while(1) {
-                                    if(Boton() == 2){
-                                       PNP_estado == 1;
-                                       output_low(PIN_D1);
-                                       lcd_gotoxy(0,2);
-                                       printf(lcd_putc," Regresando...");
-                                       delay_ms(1000);
-                                       printf(lcd_putc,"\f");
-                                       lcd_gotoxy(0,1);
-                                       printf(lcd_putc," 1>NPN 2>PNP");
-                                       lcd_gotoxy(0,2);
-                                       printf(lcd_putc," 4>NADA 3>Regresar");
-                                       delay_ms(1000);
-                                       break;
-                                    }
-                                 }
-                              }
-                                 
-                              
-                              
                               if(Boton() == 3) {
                                  delay_ms(500);
                                  goto MENUPRINCIPAL;
