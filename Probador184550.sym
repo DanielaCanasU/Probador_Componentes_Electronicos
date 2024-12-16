@@ -215,14 +215,14 @@ Project Directory:
     C:\Users\Persona\Documents\Universidad\Servicio\Probador_Componentes_Electronicos\
 
 Project Files:
-    Probador184550.c                                        [15-Dec-24 17:01  CRC=DFC450DE]
+    Probador184550.c                                        [15-Dec-24 21:22  CRC=C94D92CB]
     ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18f4550.h [15-Jan-18 15:57  CRC=06200171]
     ..\..\..\..\..\..\Program Files (x86)\PICC\Drivers\i2c_Flex_LCD.c [14-Dec-24 19:20  CRC=76E3ECE2]
 
-Source signature=D3AC2C13
+Source signature=BD356E00
 Program memory checksum=0000
 Program memory CRC=0000
-Hex file CRC=C59D
+Hex file CRC=CF4E
 
 Units:
     Probador184550 (main)

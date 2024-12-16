@@ -1,4 +1,4 @@
-CCS PCH C Compiler, Version 5.076, 56587               15-Dec-24 17:01
+CCS PCH C Compiler, Version 5.076, 56587               15-Dec-24 21:22
 
                Filename:   C:\Users\Persona\Documents\Universidad\Servicio\Probador_Componentes_Electronicos\Probador184550.lst
 
@@ -2926,9 +2926,9 @@ CCS PCH C Compiler, Version 5.076, 56587               15-Dec-24 17:01
 144E:  CALL   0728
 1452:  DECFSZ 3F,F
 1454:  BRA    144A
-....................                                  if (input(PIN_C4) == 0) { 
-1456:  BSF    F94.4
-1458:  BTFSC  F82.4
+....................                                  if (input(PIN_C6) == 0) { 
+1456:  BSF    F94.6
+1458:  BTFSC  F82.6
 145A:  BRA    145E
 ....................                                     NPN_estado = 0; 
 145C:  BCF    2B.2
@@ -2936,17 +2936,17 @@ CCS PCH C Compiler, Version 5.076, 56587               15-Dec-24 17:01
 ....................                                  output_high(PIN_D0); 
 145E:  BCF    F95.0
 1460:  BSF    F8C.0
-....................                                  delay_ms(500); 
-1462:  MOVLW  02
+....................                                  delay_ms(1500); 
+1462:  MOVLW  06
 1464:  MOVWF  3F
 1466:  MOVLW  FA
 1468:  MOVWF  40
 146A:  CALL   0728
 146E:  DECFSZ 3F,F
 1470:  BRA    1466
-....................                                  if (input(PIN_C4) == 1) { 
-1472:  BSF    F94.4
-1474:  BTFSS  F82.4
+....................                                  if (input(PIN_C6) == 1) { 
+1472:  BSF    F94.6
+1474:  BTFSS  F82.6
 1476:  BRA    147A
 ....................                                     NPN_estado = 0; 
 1478:  BCF    2B.2

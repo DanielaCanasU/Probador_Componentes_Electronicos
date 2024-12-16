@@ -355,6 +355,9 @@ MENUPRINCIPAL:
                                  printf(lcd_putc,"NPN Testing...");
                                  delay_ms(1000);
                                  if (input(PIN_C6) == 0) {
+                                    lcd_gotoxy(0,2);
+                                    printf(lcd_putc," 4>NADA 3>Regresar");
+                                    delay_ms(1000);
                                     NPN_estado = 0;
                                  }
                                  output_high(PIN_D0);

@@ -354,12 +354,12 @@ MENUPRINCIPAL:
                                  lcd_gotoxy(0,1);
                                  printf(lcd_putc,"NPN Testing...");
                                  delay_ms(1000);
-                                 if (input(PIN_C6) == 0) {
+                                 if (input(PIN_C4) == 0) {
                                     NPN_estado = 0;
                                  }
                                  output_high(PIN_D0);
                                  delay_ms(1500);
-                                 if (input(PIN_C6) == 1) {
+                                 if (input(PIN_C4) == 1) {
                                     NPN_estado = 0;
                                  }
                                  if (NPN_estado == 1) {
