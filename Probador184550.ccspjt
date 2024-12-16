@@ -37,10 +37,10 @@ Type=4
 1=Probador184550.c
 
 [defines]
-buildcount=25
+buildcount=35
 
 [ProjectLog]
-Days=1
+Days=2
 D1=14-12-2024
 D1_L=34
 D1_L1=[46839]Stopped Editing.
@@ -81,10 +81,17 @@ D1_L31=[74501]Project Opened.
 D1_L32=[74519]Started Editing.
 D1_L33=[76211]Stopped Editing.
 D1_L34=[79137]Started Editing.
+D2=15-12-2024
+D2_L=5
+D2_L1=[62108]Project Opened.
+D2_L2=[62260]Started Editing.
+D2_L3=[63080]Stopped Editing.
+D2_L4=[63180]Started Editing.
+D2_L5=[64307]Stopped Editing.
 
 [Opened Files]
 1=Probador184550.c
-t1=201
+t1=37
 2=..\..\..\Practica5.c
 t2=13
 3=..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18f4550.h

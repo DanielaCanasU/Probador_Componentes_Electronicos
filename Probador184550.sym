@@ -44,16 +44,16 @@
 033-036 MAIN.valor_adc
 037-03A MAIN.lectura
 03B-03E MAIN.Lecturaad620
-03F-042 @PRINTF_L32D_768FPFPF.P1
-03F     @PSTRINGCN_768.P2
+03F     @PSTRINGCN_768.P1
+03F-040 @ITOF.P2
+03F     @PRINTF_D_768.P3
 03F     lcd_init.addr
-03F-040 @ITOF.P1
-03F     @PRINTF_D_768.P2
+03F-042 @PRINTF_L32D_768FPFPF.P1
 03F     MAIN.@SCRATCH1
 03F     @PSTRINGC_768.@SCRATCH1
-040     @PRINTF_D_768.P1
-040     @delay_ms2.P2
 040     lcd_init.col
+040     @delay_ms2.P1
+040     @PRINTF_D_768.P2
 040     @PSTRINGC_768.@SCRATCH2
 040     @PSTRINGCN_768.@SCRATCH1
 041     lcd_init.row
@@ -76,17 +76,17 @@
 049     @PRINTF_L32D_768FPFPF.@SCRATCH6
 04A     @PRINTF_L32D_768FPFPF.@SCRATCH7
 04B     @PRINTF_L32D_768FPFPF.@SCRATCH8
-04C-04F @FTOSD.P1
-04C     LCD_PUTC.in_data
 04C-04F @MULFF.P1
 04C-04F @DIV3232.P2
-04D     lcd_gotoxy.x
+04C-04F @FTOSD.P3
+04C     LCD_PUTC.in_data
 04D     @delay_ms1.P1
+04D     lcd_gotoxy.x
 04E     lcd_gotoxy.y
 04F     lcd_gotoxy.row
-050     lcd_gotoxy.column
 050-053 @DIV3232.P1
 050-053 @MULFF.P2
+050     lcd_gotoxy.column
 050     @FTOSD.@SCRATCH1
 051     lcd_gotoxy.row_addr
 052     lcd_gotoxy.lcd_address
@@ -115,14 +115,14 @@ FBC     CCP_2_HIGH
 FBE     CCP_1_LOW
 FBE     CCP_1
 FBF     CCP_1_HIGH
-FE1-FE2 @WRITE_PACKED_MEMORY.P1
-FE1-FE2 @READ_PACKED_MEMORY.P2
-FE9-FEA @READ_PROGRAM_MEMORY.P1
-FE9-FEA @WRITE_PROGRAM_MEMORY.P2
-FE9-FEA @WRITE_PACKED_MEMORY.P3
+FE1-FE2 @READ_PACKED_MEMORY.P1
+FE1-FE2 @WRITE_PACKED_MEMORY.P2
+FE9-FEA @WRITE_PACKED_MEMORY.P1
+FE9-FEA @READ_PROGRAM_MEMORY.P2
+FE9-FEA @WRITE_PROGRAM_MEMORY.P3
 FE9-FEA @READ_PACKED_MEMORY.P4
-FF6-FF8 @READ_PROGRAM_MEMORY.P1
-FF6-FF8 @WRITE_PROGRAM_MEMORY.P2
+FF6-FF8 @WRITE_PROGRAM_MEMORY.P1
+FF6-FF8 @READ_PROGRAM_MEMORY.P2
 
 ROM Allocation:
 0000BA  LCD_INIT_STRING.call
@@ -167,50 +167,57 @@ ROM Allocation:
 000310  @const873.call
 000320  @const874.call
 000332  @const876.call
-000342  @const877.call
-00034C  @const879.call
-00035C  @const881.call
-00036C  @const882.call
+000342  @const878.call
+000352  @const879.call
+000364  @const881.call
+000374  @const882.call
 00037E  @const884.call
-000390  @const885.call
-0003A2  @const887.call
-0003B4  @const888.call
+00038C  @const885.call
+00039C  @const887.call
+0003AC  @const888.call
 0003BE  @const890.call
-0003CE  @delay_ms1
-0003F6  @I2C_WRITE_129
-00043E  i2c_send_nibble
-0004CE  lcd_send_byte
-00051C  lcd_clear
-000530  lcd_init
-0005D6  lcd_gotoxy
-000638  LCD_PUTC
-00067A  @PSTRINGC_768
-00069A  @delay_ms2
-0006C2  Boton
-0006F8  @ITOF
-000730  @MULFF
-000822  @PSTRINGCN_768
-000840  @FTOSD
-000880  @DIV3232
-00090E  @PRINTF_L32D_768FPFPF
-000A88  @DIV88
-000AB0  @PRINTF_D_768
-000B5A  @cinit1
-000B5A  MAIN
-000B94  @cinit2
-05E9  MENUPRINCIPAL
+0003CE  @const892.call
+0003DE  @const893.call
+0003F0  @const895.call
+000402  @const896.call
+000414  @const898.call
+000426  @const899.call
+000430  @const901.call
+000440  @delay_ms1
+000468  @I2C_WRITE_129
+0004B0  i2c_send_nibble
+000540  lcd_send_byte
+00058E  lcd_clear
+0005A2  lcd_init
+000648  lcd_gotoxy
+0006AA  LCD_PUTC
+0006EC  @PSTRINGC_768
+00070C  @delay_ms2
+000734  Boton
+00076A  @ITOF
+0007A2  @MULFF
+000894  @PSTRINGCN_768
+0008B2  @FTOSD
+0008F2  @DIV3232
+000980  @PRINTF_L32D_768FPFPF
+000AFA  @DIV88
+000B22  @PRINTF_D_768
+000BCC  @cinit1
+000BCC  MAIN
+000C06  @cinit2
+0622  MENUPRINCIPAL
 
 Project Directory:
     C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\
 
 Project Files:
-    Probador184550.c                                        [15-dic.-24 00:17  CRC=D2211D2A]
+    Probador184550.c                                        [15-dic.-24 17:46  CRC=1CD565BA]
     ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18f4550.h [21-oct.-22 11:08  CRC=5418AFD6]
     i2c_Flex_LCD.c                                          [14-dic.-24 19:41  CRC=76E3ECE2]
 
-Source signature=1401A6C4
+Source signature=5EB5EF54
 Program memory checksum=0000
-Hex file CRC=C999
+Hex file CRC=5021
 
 Units:
     C:\Users\gabog\OneDrive\Documentos\GitHub\Probador_Componentes_Electronicos\Probador184550 (main)
@@ -222,11 +229,11 @@ Compiler Settings:
     Opt Level:      9
     Short,Int,Long: UNSIGNED: 1,8,16
     Float,Double:   32,32
-    ICD Provisions: Yes
     Compile Mode:   CCS5
 
 Output Files:
     XREF file:   Probador184550.xsym
+    Errors:      Probador184550.err
     Ext Symbols: Probador184550.esym
     INHX32:      Probador184550.hex
     Symbols:     Probador184550.sym

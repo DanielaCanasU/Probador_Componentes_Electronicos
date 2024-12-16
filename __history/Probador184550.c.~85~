@@ -47,7 +47,7 @@ int Boton(){
             return 2;
             } else if(input(PIN_A5 )) {
             return 3;
-            } else if (input(PIN_C0)){
+            } else if (input(PIN_A6)){
             return 4;
             }
             return 0;

@@ -1,23 +1,23 @@
 
-ROM used:   4952/31936 (16%)
-            4952/31936 (16%) including unused fragments
+ROM used:   5324/32768 (16%)
+            5324/32768 (16%) including unused fragments
 
-            3.4 Average locations per line
-            14.5 Average locations per statement
+            3.6 Average locations per line
+            14.3 Average locations per statement
 
-RAM used:   64/2036 (3%) at main() level
-            91/2036 (4%) worst case
+RAM used:   64/2048 (3%) at main() level
+            91/2048 (4%) worst case
 
 Stack used: 7 worst case (6 in main + 1 for interrupts)
-Stack size: 30
+Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  351   265  77  Probador184550.c
+  382   295  79  Probador184550.c
   877     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18f4550.h
-  213    77  23  i2c_Flex_LCD.c
+  213    77  21  i2c_Flex_LCD.c
 ----- -----
- 1441   342 Total
+ 1472   372 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
@@ -34,7 +34,7 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     12   0    0     43  1.8  pulsos
 0     26   0    0    154  3.1  tiempo_final_555
 0     54   1    0    193  2.6  Boton
-0   2050  21   13  10554  7.0  MAIN
+0   2308  22   13  12158  7.0  MAIN
 0     16   0    0             @const792
 0     32   0    2             @PSTRINGC_768
 0     16   0    0             @const797
@@ -82,35 +82,42 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     16   0    0             @const873
 0     18   0    0             @const874
 0     16   0    0             @const876
-0     10   0    0             @const877
-0     16   0    0             @const879
+0     16   0    0             @const878
+0     18   0    0             @const879
 0     16   0    0             @const881
-0     18   0    0             @const882
-0     18   0    0             @const884
-0     18   0    0             @const885
-0     18   0    0             @const887
-0     10   0    0             @const888
+0     10   0    0             @const882
+0     14   0    0             @const884
+0     16   0    0             @const885
+0     16   0    0             @const887
+0     18   0    0             @const888
 0     16   0    0             @const890
+0     16   0    0             @const892
+0     18   0    0             @const893
+0     18   0    0             @const895
+0     18   0    0             @const896
+0     18   0    0             @const898
+0     10   0    0             @const899
+0     16   0    0             @const901
  Inline         0             @cinit1
 
 Program metrics:
     Functions               10
-    Statements              342
-    Comments                320
-    Volume (V)              16928
+    Statements              372
+    Comments                324
+    Volume (V)              18634
     Difficulty (D)          43.5
-    Effort to implement (E) 736183
-    Time to implement (T)   11 hours, 22 minutes
+    Effort to implement (E) 809973
+    Time to implement (T)   12 hours, 30 minutes
     Est Delivered Bugs (B)  3
-    Cyclomatic Complexity   43
-    Maintainability (MI)    105
+    Cyclomatic Complexity   45
+    Maintainability (MI)    101
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
 00004-00006     0  4  
 00008-000B8   178  0  
-000BA-07CBE  4770  26980  
+000BA-07FFE  5142  27440  
 
 
 

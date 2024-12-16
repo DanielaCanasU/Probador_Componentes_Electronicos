@@ -1,5 +1,5 @@
 ÀÄProbador184550
-   ÃÄMAIN  0/2050  Ram=13
+   ÃÄMAIN  0/2308  Ram=13
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄ@cinit2  (Inline)  Ram=0
    ³  ÃÄlcd_init  0/166  Ram=5
@@ -285,11 +285,50 @@
    ³  ³  ÀÄ*
    ³  ÃÄ@PSTRINGC_768  0/32  Ram=2
    ³  ³  ÀÄ*
+   ³  ÃÄ@delay_ms2  0/40  Ram=1
+   ³  ÃÄLCD_PUTC  0/66  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/98  Ram=7
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_768  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/98  Ram=7
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_768  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄBoton  0/54  Ram=0
+   ³  ÃÄLCD_PUTC  0/66  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/98  Ram=7
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_768  0/32  Ram=2
+   ³  ³  ÀÄ*
    ³  ÃÄlcd_gotoxy  0/98  Ram=7
    ³  ³  ÀÄ*
    ³  ÃÄ@PSTRINGC_768  0/32  Ram=2
    ³  ³  ÀÄ*
    ³  ÃÄ@delay_ms2  0/40  Ram=1
+   ³  ÃÄLCD_PUTC  0/66  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/98  Ram=7
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_768  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/98  Ram=7
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_768  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄ@delay_ms2  0/40  Ram=1
+   ³  ÃÄLCD_PUTC  0/66  Ram=1
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/98  Ram=7
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_768  0/32  Ram=2
+   ³  ³  ÀÄ*
+   ³  ÃÄlcd_gotoxy  0/98  Ram=7
+   ³  ³  ÀÄ*
+   ³  ÃÄ@PSTRINGC_768  0/32  Ram=2
+   ³  ³  ÀÄ*
    ³  ÃÄBoton  0/54  Ram=0
    ³  ÃÄLCD_PUTC  0/66  Ram=1
    ³  ³  ÀÄ*
