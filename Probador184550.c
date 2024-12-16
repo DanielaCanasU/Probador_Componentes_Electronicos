@@ -17,6 +17,7 @@ int1 bandera_prueba_555;
 int1 bandera_estado_555;
 int32 value;
 int opambuenos = 0;
+int1 NPN_estado;
 
 #INT_EXT2
 void pulsos() {
@@ -56,6 +57,7 @@ void main(){
       setup_oscillator(OSC_4MHZ);
       set_tris_a(0xff);// puerto a entrada
       set_tris_d(0x00);// puerto d salida
+      set_tris_c(0xff);// puerto c entrada
       SETUP_COUNTERS(RTCC_INTERNAL,RTCC_DIV_256);
       ENABLE_INTERRUPTS(GLOBAL);// Habilita las interrupciones globales
       ext_int_edge(H_TO_L); //Inicia el flanco de la interruccion de alto abajo
@@ -347,8 +349,8 @@ MENUPRINCIPAL:
                         lcd_gotoxy(0,1);
                         printf(lcd_putc," 1>LM358 2>LM348");
                         lcd_gotoxy(0,2);
-                        printf(lcd_putc," 4>LM324 3>RETURN");
-                        delay_ms(3000);
+                        printf(lcd_putc," 4>LM324 3>Pag.Sig.");
+                        delay_ms(1000);
                         if(Boton()==4){
                             while(1){
                                output_high(PIN_B7); // Colocar en alto pin B0 
@@ -369,13 +371,88 @@ MENUPRINCIPAL:
                             }   
                         }
                         if(Boton()==3){
-                            goto MENUPRINCIPAL;
+                           printf(lcd_putc,"\f");
+                           lcd_gotoxy(0,1);
+                           printf(lcd_putc," 1>NPN 2>PNP");
+                           lcd_gotoxy(0,2);
+                           printf(lcd_putc," 4>NADA 3>Regresar");
+                           delay_ms(1000);
+                           while(1){
+                              if(Boton()==1) {
+                                 NPN_estado = 1;
+                                 printf(lcd_putc,"\f");
+                                 lcd_gotoxy(0,1);
+                                 printf(lcd_putc,"NPN Testing...");
+                                 delay_ms(1000);
+                                 if (input(PIN_C4) == 0) {
+                                    NPN_estado = 0;
+                                 }
+                                 output_high(PIN_D0);
+                                 delay_ms(500);
+                                 if (input(PIN_C4) == 1) {
+                                    NPN_estado = 0;
+                                 }
+                                 if (NPN_estado == 1) {
+                                    printf(lcd_putc,"\f");
+                                    lcd_gotoxy(0,1);
+                                    printf(lcd_putc,"NPN BUENO");
+                                    lcd_gotoxy(0,2);
+                                    printf(lcd_putc," 2>Volver");
+                                    delay_ms(1000);
+                                    while(1) {
+                                       if( Boton() = 2){
+                                          break;
+                                       }
+                                    }
+                                 }
+                                 if (NPN_estado == 0) {
+                                    printf(lcd_putc,"\f");
+                                    lcd_gotoxy(0,1);
+                                    printf(lcd_putc,"NPN MALO");
+                                    lcd_gotoxy(0,2);
+                                    printf(lcd_putc," 2>Volver");
+                                    delay_ms(1000);
+                                 }
+                                 while(1) {
+                                    if(Boton() == 2){
+                                       NPN_estado == 1;
+                                       output_low(PIN_D0);
+                                       lcd_gotoxy(0,2);
+                                       printf(lcd_putc," Regresando...");
+                                       delay_ms(1000);
+                                       printf(lcd_putc,"\f");
+                                       lcd_gotoxy(0,1);
+                                       printf(lcd_putc," 1>NPN 2>PNP");
+                                       lcd_gotoxy(0,2);
+                                       printf(lcd_putc," 4>NADA 3>Regresar");
+                                       delay_ms(1000);
+                                       break;
+                                    }
+                                 }
+                              }
+                              if(Boton() == 3) {
+                                 delay_ms(1000);
+                                 break;
+                              }
+                           }
                         }
+<<<<<<< HEAD
                     }
                 }           
                
+=======
+                     }
+                  }
+               }
+>>>>>>> 2b8d159640aedda8bb7d762f89569cb69bb369b8
             }
-         }           
+         }
       }
+<<<<<<< HEAD
    }
 }
+=======
+}   
+
+
+>>>>>>> 2b8d159640aedda8bb7d762f89569cb69bb369b8
