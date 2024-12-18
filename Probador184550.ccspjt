@@ -38,13 +38,13 @@ Type=4
 
 [defines]
 <<<<<<< HEAD
-buildcount=42
+buildcount=59
 =======
 buildcount=33
 >>>>>>> 2b8d159640aedda8bb7d762f89569cb69bb369b8
 
 [ProjectLog]
-Days=3
+Days=4
 D1=14-12-2024
 D1_L=34
 D1_L1=[46839]Stopped Editing.
@@ -60,7 +60,7 @@ D1_L10=[51934]Started Editing.
 D1_L11=[52756]Stopped Editing.
 D1_L12=[66601]Started Editing.
 D1_L13=[66630]Stopped Editing.
-TotalEdit=188
+TotalEdit=210
 TotalDebug=0
 D1_E=106
 D1_D=0
@@ -117,6 +117,26 @@ D3_L6=[34651]Project Opened.
 D3_L7=[34709]Started Editing.
 D3_L8=[35392]Stopped Editing.
 D3_L9=[35535]Project Closed.
+D4=17-12-2024
+D4_L=16
+D4_L1=[78782]Project Opened.
+D4_L2=[79474]Started Editing.
+D4_L3=[79778]Stopped Editing.
+D4_L4=[80039]Started Editing.
+D4_L5=[80369]Stopped Editing.
+D4_L6=[80490]Started Editing.
+D4_L7=[81310]Stopped Editing.
+D4_L8=[81449]Started Editing.
+D4_L9=[82123]Stopped Editing.
+D4_L10=[83315]Started Editing.
+D4_L11=[83976]Stopped Editing.
+D4_L12=[84003]Started Editing.
+D4_L13=[84323]Stopped Editing.
+D4_L14=[84589]Started Editing.
+D4_L15=[84890]Stopped Editing.
+D4_E=22
+D4_D=0
+D4_L16=[86074]Project Closed.
 
 [Opened Files]
 1=Probador184550.c
@@ -141,7 +161,7 @@ D2_L13=[77267]Stopped Editing.
 
 [Opened Files]
 1=Probador184550.c
-t1=431
+t1=390
 >>>>>>> 2b8d159640aedda8bb7d762f89569cb69bb369b8
 2=..\..\..\Practica5.c
 t2=13

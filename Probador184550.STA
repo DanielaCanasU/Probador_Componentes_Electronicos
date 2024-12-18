@@ -1,8 +1,8 @@
 
-ROM used:   7734/32768 (24%)
-            7734/32768 (24%) including unused fragments
+ROM used:   7900/32768 (24%)
+            7900/32768 (24%) including unused fragments
 
-            4.6 Average locations per line
+            4.7 Average locations per line
             13.2 Average locations per statement
 
 RAM used:   64/2048 (3%) at main() level
@@ -13,28 +13,28 @@ Stack size: 31
 
 Lines Stmts  %   Files
 ----- ----- ---  -----
-  588   510  87  Probador184550.c
+  602   523  87  Probador184550.c
   877     0   0  ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\18f4550.h
   213    77  13  i2c_Flex_LCD.c
 ----- -----
- 1678   587 Total
+ 1692   600 Total
 
 Page ROM  %  RAM    Vol Diff  Functions:
 ---- --- --- ---    --- ----  ----------
 0     72   0    1             @I2C_WRITE_129
 0     40   0    1             @delay_ms1
 0    144   1    3    574  5.9  i2c_send_nibble
-0     78   1    3    149  2.8  lcd_send_byte
+0     78   0    3    149  2.8  lcd_send_byte
 0     20   0    0     61  1.9  lcd_clear
 0     20   0    0             @const758
-0    166   1    5    902  5.8  lcd_init
+0    168   1    5    902  5.8  lcd_init
 0     98   1    7    681  8.0  lcd_gotoxy
 0     66   0    1    310  5.9  LCD_PUTC
 0     40   0    1             @delay_ms2
 0     12   0    0     43  1.8  pulsos
 0     26   0    0    154  3.1  tiempo_final_555
 0     54   0    0    193  2.6  Boton
-0   4068  26   13  23633  7.0  MAIN
+0   4182  26   13  24383  7.0  MAIN
 0     16   0    0             @const794
 0     32   0    2             @PSTRINGC_768
 0     16   0    0             @const799
@@ -82,84 +82,87 @@ Page ROM  %  RAM    Vol Diff  Functions:
 0     16   0    0             @const875
 0     18   0    0             @const876
 0     16   0    0             @const878
-0     10   0    0             @const879
-0     14   0    0             @const881
-0     16   0    0             @const882
-0     16   0    0             @const884
-0     18   0    0             @const885
+0     16   0    0             @const880
+0     18   0    0             @const881
+0     16   0    0             @const883
+0     10   0    0             @const884
+0     14   0    0             @const886
 0     16   0    0             @const887
 0     16   0    0             @const889
 0     18   0    0             @const890
-0     18   0    0             @const892
-0     20   0    0             @const893
+0     16   0    0             @const892
+0     16   0    0             @const894
 0     18   0    0             @const895
-0     10   0    0             @const896
-0     16   0    0             @const898
-0     18   0    0             @const899
-0     16   0    0             @const901
-0     18   0    0             @const902
-0     12   0    0             @const904
-0     14   0    0             @const905
+0     18   0    0             @const897
+0     20   0    0             @const898
+0     18   0    0             @const900
+0     10   0    0             @const901
+0     16   0    0             @const903
+0     18   0    0             @const904
+0     16   0    0             @const906
 0     18   0    0             @const907
-0     20   0    0             @const908
-0     16   0    0             @const910
+0     12   0    0             @const909
+0     14   0    0             @const910
 0     18   0    0             @const912
 0     20   0    0             @const913
-0     18   0    0             @const915
-0     10   0    0             @const916
-0     16   0    0             @const918
-0     18   0    0             @const919
-0     16   0    0             @const921
-0     18   0    0             @const922
-0     16   0    0             @const924
-0     18   0    0             @const925
-0     16   0    0             @const927
-0     18   0    0             @const928
-0     12   0    0             @const930
-0     16   0    0             @const931
+0     16   0    0             @const915
+0     18   0    0             @const917
+0     20   0    0             @const918
+0     18   0    0             @const920
+0     10   0    0             @const921
+0     16   0    0             @const923
+0     18   0    0             @const924
+0     16   0    0             @const926
+0     18   0    0             @const927
+0     16   0    0             @const929
+0     18   0    0             @const930
+0     16   0    0             @const932
 0     18   0    0             @const933
-0     20   0    0             @const934
+0     12   0    0             @const935
 0     16   0    0             @const936
 0     18   0    0             @const938
 0     20   0    0             @const939
-0     14   0    0             @const941
-0     20   0    0             @const942
-0     16   0    0             @const944
-0     10   0    0             @const946
-0     10   0    0             @const947
-0     10   0    0             @const949
-0     10   0    0             @const950
-0     16   0    0             @const951
-0     14   0    0             @const953
-0     20   0    0             @const954
+0     16   0    0             @const941
+0     18   0    0             @const943
+0     20   0    0             @const944
+0     14   0    0             @const946
+0     20   0    0             @const947
+0     16   0    0             @const949
+0     10   0    0             @const951
+0     10   0    0             @const952
+0     10   0    0             @const954
+0     10   0    0             @const955
 0     16   0    0             @const956
-0     10   0    0             @const958
-0     10   0    0             @const959
-0     10   0    0             @const961
-0     10   0    0             @const962
-0     16   0    0             @const963
-0     14   0    0             @const965
-0     20   0    0             @const966
+0     14   0    0             @const958
+0     20   0    0             @const959
+0     16   0    0             @const961
+0     10   0    0             @const963
+0     10   0    0             @const964
+0     10   0    0             @const966
+0     10   0    0             @const967
+0     16   0    0             @const968
+0     14   0    0             @const970
+0     20   0    0             @const971
  Inline         0             @cinit1
 
 Program metrics:
     Functions               10
-    Statements              587
-    Comments                322
-    Volume (V)              30640
+    Statements              600
+    Comments                324
+    Volume (V)              31419
     Difficulty (D)          43.5
-    Effort to implement (E) 1333797
-    Time to implement (T)   20 hours, 35 minutes
+    Effort to implement (E) 1367454
+    Time to implement (T)   21 hours, 6 minutes
     Est Delivered Bugs (B)  4
-    Cyclomatic Complexity   69
-    Maintainability (MI)    91
+    Cyclomatic Complexity   70
+    Maintainability (MI)    90
 
  Segment     Used  Free
 -----------  ----  ----
 00000-00002     4  0  
 00004-00006     0  4  
 00008-000B8   178  0  
-000BA-07FFE  7552  25030  
+000BA-07FFE  7718  24864  
 
 
 

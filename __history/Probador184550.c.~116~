@@ -57,7 +57,7 @@ int Boton(){
 void main(){
       setup_oscillator(OSC_4MHZ);
       set_tris_a(0xff);// puerto a entrada
-      set_tris_d(00001100);// puerto d salida
+      set_tris_d(00002100);// puerto d salida
       set_tris_c(0xff);// puerto c entrada
       SETUP_COUNTERS(RTCC_INTERNAL,RTCC_DIV_256);
       ENABLE_INTERRUPTS(GLOBAL);// Habilita las interrupciones globales

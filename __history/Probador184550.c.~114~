@@ -57,7 +57,7 @@ int Boton(){
 void main(){
       setup_oscillator(OSC_4MHZ);
       set_tris_a(0xff);// puerto a entrada
-      set_tris_d(00001100);// puerto d salida
+      set_tris_d(00000000);// puerto d salida
       set_tris_c(0xff);// puerto c entrada
       SETUP_COUNTERS(RTCC_INTERNAL,RTCC_DIV_256);
       ENABLE_INTERRUPTS(GLOBAL);// Habilita las interrupciones globales
@@ -221,7 +221,7 @@ MENUPRINCIPAL:
                             lcd_gotoxy(0,2);
                             printf(lcd_putc," 2>Volver");
                             delay_ms(1000);
-                            if(input(PIN_D3)==1){
+                            if(input(PIN_C4)==1){
                                  printf(lcd_putc,"\f");
                                  lcd_gotoxy(0,1);
                                  printf(lcd_putc," AmpOp-1 Bueno!"); //  escribir eso
@@ -248,7 +248,7 @@ MENUPRINCIPAL:
                                  delay_ms(500);
                                  opambuenos = opambuenos + 1;
                             } 
-                            if(input(PIN_D2)==1){
+                            if(input(PIN_C5)==1){
                                  printf(lcd_putc,"\f");
                                  lcd_gotoxy(0,1);
                                  printf(lcd_putc," AmpOp-4 Bueno!"); //  escribir eso
@@ -403,7 +403,7 @@ MENUPRINCIPAL:
                                   lcd_gotoxy(0,2);
                                   printf(lcd_putc," 2>Volver");
                                   delay_ms(1000);
-                                  if(input(PIN_D3)==1){
+                                  if(input(PIN_C4)==1){
                                        printf(lcd_putc,"\f");
                                        lcd_gotoxy(0,1);
                                        printf(lcd_putc," AmpOp-1 Bueno!"); //  escribir eso
@@ -430,7 +430,7 @@ MENUPRINCIPAL:
                                        delay_ms(500);
                                        opambuenos = opambuenos + 1;
                                   } 
-                                  if(input(PIN_D2)==1){
+                                  if(input(PIN_C5)==1){
                                        printf(lcd_putc,"\f");
                                        lcd_gotoxy(0,1);
                                        printf(lcd_putc," AmpOp-4 Bueno!"); //  escribir eso
